@@ -135,6 +135,16 @@
     <section class="page" id="pg-settings" style="flex-direction:column;padding:24px;gap:16px;overflow-y:auto">
       <div style="font-size:14px;font-weight:600">数据与关于</div>
       <div id="setBody" style="max-width:680px"></div>
+      <h3 class="sec"><span>LLM 生成层（自选密钥 · 仅存本浏览器）</span></h3>
+      <div class="cvForm" style="max-width:680px">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+          <div class="fld"><label>API Base URL（OpenAI 兼容）</label><input id="llmBase" placeholder="https://api.openai.com/v1"></div>
+          <div class="fld"><label>模型</label><input id="llmModel" placeholder="gpt-4o-mini"></div>
+        </div>
+        <div class="fld"><label>API Key（localStorage 本地保存，不上传不经服务器）</label><input id="llmKey" type="password" placeholder="sk-..."></div>
+        <div style="display:flex;gap:10px"><button class="btn sm" id="llmSave">保存</button><button class="btn sm ghost" id="llmTest">连通测试</button><button class="btn sm plain" id="llmClear">清除</button><span id="llmStat" style="color:var(--sub);font-size:12px;align-self:center"></span></div>
+        <div style="color:var(--sub);font-size:12px;line-height:1.8">配置后「问答」模块在证据卡之上追加生成式答案：系统提示词锁定造价师人设+仅依据证据作答+引用编号/页码；未配置时回退模板合成答案。</div>
+      </div>
       <h3 class="sec"><span>数据自检报告（恒等校验）</span></h3>
       <div id="qaBody" class="card" style="max-width:680px;overflow:auto;max-height:40vh"></div>
     </section>

@@ -258,6 +258,12 @@ function runAsk() { clearTimeout(askT); askT = setTimeout(async () => {
     grp('我的笔记', r.notes, x => '<div class="ruleItem" data-note="' + esc(x.code) + '" style="cursor:pointer"><div class="t"><b class="qbtn">' + esc(x.code) + '</b>　' + hl(x.snippet, q) + '</div></div>') +
     (!r.quotas.length && !r.rules.length && !r.notes.length ? '<div class="empty">没有找到直接证据<br>换个说法，或去「规则」模块浏览</div>' : '');
   const aa = $('#askAns'); if (r.answer) { aa.style.display = ''; aa.innerHTML = '<b>答：</b>' + hl(r.answer, q); } else aa.style.display = 'none';
+  if (llmCfg()) {
+    const gen = document.createElement('div'); gen.className = 'card'; gen.style.cssText = 'padding:14px 18px;font-size:13.5px;line-height:1.9;background:var(--panel)';
+    gen.innerHTML = '<b>生成式答案（' + esc(llmCfg().model || 'LLM') + ' · 证据增强）</b><div style="color:var(--sub)">生成中…</div>';
+    aa.after(gen);
+    llmAnswer(q, r).then(t => { gen.innerHTML = '<b>生成式答案（' + esc(llmCfg().model || 'LLM') + ' · 证据增强）</b><div style="white-space:pre-wrap;margin-top:6px">' + esc(t || '（无返回）') + '</div>'; }).catch(e => { gen.innerHTML = '<b>生成式答案</b><div style="color:var(--danger)">调用失败：' + esc(e.message) + '（已回退模板答案）</div>'; });
+  }
   $('#askOut').querySelectorAll('[data-code]').forEach(el => el.onclick = () => { go('lookup'); openItem(el.dataset.code); });
   $('#askOut').querySelectorAll('[data-note]').forEach(el => el.onclick = () => { go('lookup'); openItem(el.dataset.note, 'note'); });
 }, 220); }
@@ -350,6 +356,19 @@ function openModal(title, bodyHtml, after) {
   $('#mgTitle').textContent = title; $('#mgBody').innerHTML = bodyHtml; m.classList.add('on');
   if (after) after();
 }
+/* ── LLM 生成层（BYO-Key，证据增强） ── */
+function llmCfg() { try { return JSON.parse(localStorage.getItem('wb_llm') || 'null'); } catch { return null; } }
+async function llmAnswer(q, ev) {
+  const c = llmCfg(); if (!c || !c.key || !c.base) return null;
+  const sys = '你是一名资深造价工程师（湖北2024定额口径）。仅依据所给证据回答；引用定额编号与规则页码；证据不足时明确说明并给出核查路径（册/章/页）。回答简洁、结构化，不编造数字。';
+  const ctx = '【证据·定额子目】\n' + ev.quotas.map(x => x.code + ' ' + x.name + (x.spec ? '(' + x.spec + ')' : '') + ' 单位' + (x.unit || '-') + ' 综合单价(不含税)' + (x.noTax != null ? x.noTax : '-') + ' 工作:' + x.snippet).join('\n') +
+    '\n【证据·说明规则】\n' + ev.rules.map(x => x.snippet + '（' + x.book + ' P' + x.page + '）').join('\n') +
+    '\n【证据·用户笔记】\n' + ev.notes.map(x => x.code + ': ' + x.snippet).join('\n');
+  const r = await fetch(c.base.replace(/\/+$/, '') + '/chat/completions', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + c.key }, body: JSON.stringify({ model: c.model || 'gpt-4o-mini', temperature: 0.2, messages: [{ role: 'system', content: sys }, { role: 'user', content: '问题：' + q + '\n' + ctx }] }) });
+  if (!r.ok) throw new Error('HTTP ' + r.status);
+  const j = await r.json();
+  return (j.choices && j.choices[0] && j.choices[0].message && j.choices[0].message.content) || null;
+}
 /* ── 信息价模块 ── */
 function pvGo(n) { n = Math.max(1, Math.min(62, n | 0)); $('#pvPage').value = n; $('#pvFrame').src = '/tools/render.html?file=/data/raw/wuhan_price_2026-08.ok.pdf&page=' + n + '&scale=2'; }
 async function runPrices() {
@@ -413,6 +432,11 @@ async function runNotes() { const ns = await api('/api/notes/list'); $('#noteLis
   $('#noteList').querySelectorAll('[data-code]').forEach(x => x.onclick = () => { go('lookup'); openItem(x.dataset.code, 'note'); }); }
 async function runSettings() { const st = await api('/api/stats'); $('#setBody').innerHTML = `<div class="card" style="padding:16px"><div class="sumRow"><span>定额子目</span><span class="v">${st.items.toLocaleString()}</span></div><div class="sumRow"><span>说明/规则条</span><span class="v">${st.rules.toLocaleString()}</span></div><div class="sumRow"><span>册数</span><span class="v">${st.books.length}</span></div><div style="margin-top:12px;display:flex;gap:10px"><button class="btn" id="reloadBtn">热加载数据</button><button class="btn plain" id="guideBtn">重看新手引导</button></div><div style="margin-top:14px;color:var(--sub);font-size:12px;line-height:1.9">${st.books.map(b => '<span class="pill" style="margin:2px">' + esc(b) + '</span>').join('')}</div></div>`;
   $('#reloadBtn').onclick = async () => { const r = await api('/api/reload'); toast('已加载 ' + r.items + ' 条'); runSettings(); };
+  const lc = llmCfg() || {};
+  $('#llmBase').value = lc.base || ''; $('#llmModel').value = lc.model || ''; $('#llmKey').value = lc.key || '';
+  $('#llmSave').onclick = () => { localStorage.setItem('wb_llm', JSON.stringify({ base: $('#llmBase').value.trim(), model: $('#llmModel').value.trim(), key: $('#llmKey').value.trim() })); $('#llmStat').textContent = '已保存（仅本浏览器）'; toast('LLM 配置已保存'); };
+  $('#llmClear').onclick = () => { localStorage.removeItem('wb_llm'); $('#llmBase').value = $('#llmModel').value = $('#llmKey').value = ''; $('#llmStat').textContent = '已清除'; };
+  $('#llmTest').onclick = async () => { const c = { base: $('#llmBase').value.trim(), model: $('#llmModel').value.trim(), key: $('#llmKey').value.trim() }; if (!c.base || !c.key) return $('#llmStat').textContent = '请先填 Base 与 Key'; $('#llmStat').textContent = '测试中…'; try { const r = await fetch(c.base.replace(/\/+$/, '') + '/chat/completions', { method: 'POST', headers: { 'Content-Type': 'application/json', 'Authorization': 'Bearer ' + c.key }, body: JSON.stringify({ model: c.model || 'gpt-4o-mini', messages: [{ role: 'user', content: 'ping' }], max_tokens: 5 }) }); $('#llmStat').textContent = r.ok ? '连通 ✓ HTTP ' + r.status : '失败 HTTP ' + r.status; } catch (e) { $('#llmStat').textContent = '失败：' + e.message; } };
   api('/api/qa').then(qa => { $('#qaBody').innerHTML = '<table><tr><th>册</th><th class="num">子目</th><th class="num">恒等失败</th><th class="num">税率异常</th><th class="num">空名称</th><th class="num">空单位</th></tr>' + Object.entries(qa.books).map(ent => '<tr><td>' + esc(ent[0]) + '</td><td class="num">' + ent[1].n + '</td><td class="num" style="color:' + (ent[1].failSum ? 'var(--danger)' : 'var(--ok)') + '">' + ent[1].failSum + '</td><td class="num" style="color:' + (ent[1].failVat ? 'var(--amber)' : 'var(--ok)') + '">' + ent[1].failVat + '</td><td class="num">' + ent[1].emptyName + '</td><td class="num">' + ent[1].emptyUnit + '</td></tr>').join('') + '<tr><td><b>合计</b></td><td class="num"><b>' + qa.total + '</b></td><td class="num"><b>' + qa.failSum + '</b></td><td class="num"><b>' + qa.failVat + '</b></td><td colspan="2"></td></tr></table>'; });
   $('#guideBtn').onclick = () => $('#guideMask').classList.add('on'); }
 /* ── 启动 ── */
