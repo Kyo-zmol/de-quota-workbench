@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>定额知识库工作台 · 湖北2024</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="app">
+  <nav id="rail">
+    <div class="brand" aria-hidden="true">定</div>
+    <button class="nav on" data-mod="estimate" data-tip="组价工作单 · 开屏主页 · Ctrl+S 保存" aria-label="组价工作单"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 9.5h16M9.5 9.5V20"/></svg>组价</button>
+    <button class="nav" data-mod="lookup" data-tip="查定额 · 快捷键 /" aria-label="查定额"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>查询</button>
+    <button class="nav" data-mod="ask" data-tip="智能问答 · 定额/规则/笔记三路证据" aria-label="智能问答"><svg viewBox="0 0 24 24"><path d="M4 5.5h16v10H10l-4 3.5v-3.5H4z"/><path d="M8.5 9.5h7M8.5 12.5h4.5"/></svg>问答</button>
+    <button class="nav" data-mod="convert" data-tip="换算计算器" aria-label="换算计算器"><svg viewBox="0 0 24 24"><path d="M4 8h13M14 5l3 3-3 3M20 16H7M10 13l-3 3 3 3"/></svg>换算</button>
+    <button class="nav" data-mod="prices" data-tip="武汉信息价 · 材差联动" aria-label="武汉信息价"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><path d="M9 9l3 3.5L15 9M12 12.5V16M9.5 13.5h5"/></svg>价本</button>
+    <button class="nav" data-mod="rules" data-tip="规则与说明 · 17,577 条" aria-label="规则与说明"><svg viewBox="0 0 24 24"><path d="M5 4.5h9.5L19 9v10.5H5z"/><path d="M8.5 10h7M8.5 13.5h7M8.5 17h4.5"/></svg>规则</button>
+    <button class="nav" data-mod="notes" data-tip="我的笔记 · Obsidian 外独立存放" aria-label="我的笔记"><svg viewBox="0 0 24 24"><path d="M6.5 3.5h8L18.5 7.5v13h-12z"/><path d="M9.5 12h5.5M9.5 15.5h5.5"/><path d="M14.5 3.5V7.5h4"/></svg>笔记</button>
+    <div class="sp"></div>
+    <button class="nav" data-mod="settings" data-tip="设置 · 数据与关于" aria-label="设置"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.8"/><path d="M12 3.5v2.3M12 18.2v2.3M3.5 12h2.3M18.2 12h2.3M6 6l1.6 1.6M16.4 16.4L18 18M18 6l-1.6 1.6M7.6 16.4L6 18"/></svg>设置</button>
+    <div class="ver">HB-2024</div>
+  </nav>
+  <div id="main">
+    <div id="topbar">
+      <h1>定额知识库工作台</h1>
+      <span class="crumb" id="crumb">查定额</span>
+      <div class="grow"></div>
+      <div class="searchbox"><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" placeholder="搜编号 / 名称 / 章节 / 材料名" autocomplete="off"><kbd>/</kbd></div>
+      <select class="sel" id="bookSel"></select>
+      <span style="color:var(--sub);font-size:12px" id="statTxt"></span>
+    </div>
+
+    <section class="page on" id="pg-lookup">
+      <div class="pane" id="treePane"></div>
+      <div class="pane" id="listPane"></div>
+      <div class="pane" id="detailPane"></div>
+    </section>
+
+    <section class="page" id="pg-ask" style="flex-direction:column;padding:24px;gap:16px;overflow-y:auto">
+      <div class="searchbox" style="width:560px"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5.5h16v10H10l-4 3.5v-3.5H4z"/></svg><input id="askQ" placeholder="用自然语言问，如：砖基础用什么砂浆？垫层要乘系数吗？矩形柱模板在哪查？"></div>
+      <div id="askAns" class="card" style="display:none;padding:14px 18px;font-size:13.5px;line-height:1.9;background:var(--acc-soft);border-color:#BFE3DC"></div>
+      <div id="askOut" style="display:flex;flex-direction:column;gap:16px;max-width:980px"></div>
+    </section>
+
+    <section class="page" id="pg-estimate">
+      <div class="estTop">
+        <input id="estName" style="height:32px;border:1px solid var(--line);border-radius:6px;padding:0 10px;width:240px" placeholder="工作单名称">
+        <select class="sel" id="projSel"></select>
+        <select class="sel" id="taxSel"><option value="general">一般计税法</option><option value="simple">简易计税法</option></select>
+        <select class="sel" id="specSel"></select>
+        <label style="display:flex;align-items:center;gap:6px;font-size:12.5px;color:var(--sub)"><input type="checkbox" id="linkPrices"> 材差联动</label>
+        <select class="sel" id="periodSel" title="价信息期"></select>
+        <select class="sel" id="diffMode" title="材差计取口径"><option value="diff-tax">材差:只计差·差只计税</option><option value="full">材差:全额进综合单价</option></select>
+        <div class="grow" style="flex:1"></div>
+        <button class="btn plain" id="newEst">新建</button>
+        <button class="btn plain" id="addRow">＋ 添加行</button>
+        <button class="btn plain" id="impBoq">导入清单 Excel/CSV</button>
+        <input type="file" id="impFile" accept=".xlsx,.xls,.csv" style="display:none">
+        <button class="btn plain" id="anaBtn">工料机分析</button>
+        <select class="sel" id="cmpSel" style="max-width:150px"></select><button class="btn plain" id="cmpBtn">对审</button>
+        <button class="btn ghost" id="expEst">导出 Markdown</button>
+        <button class="btn ghost" id="expXlsx">导出 Excel</button>
+        <button class="btn" id="saveEst">保存 (Ctrl+S)</button>
+      </div>
+      <div class="estWrap">
+        <div class="estTable"><table><tr><th class="num">#</th><th style="width:70px">类型</th><th>清单编码</th><th>项目名称</th><th>项目特征</th><th>单位</th><th class="num">数量</th><th>定额编号</th><th class="num">综合单价</th><th class="num">合价</th><th></th></tr><tbody id="estBody"></tbody></table></div>
+        <div class="sumPane" id="sumBody"></div>
+      </div>
+    </section>
+
+    <section class="page" id="pg-convert">
+      <div class="cvGrid">
+        <div class="cvForm">
+          <div class="fld"><label>定额子目</label><div style="display:flex;gap:8px"><input id="cvCode" placeholder="如 A1-1" readonly style="flex:1"><button class="btn ghost" id="cvPick">选择…</button></div></div>
+          <div class="fld"><label>人工系数</label><div class="kRow"><input type="range" id="cvLr" min="0.5" max="2" step="0.01" value="1" style="width:100%"><input id="cvL" value="1"></div></div>
+          <div class="fld"><label>材料系数</label><div class="kRow"><input type="range" id="cvMr" min="0.5" max="2" step="0.01" value="1" style="width:100%"><input id="cvM" value="1"></div></div>
+          <div class="fld"><label>机械系数</label><div class="kRow"><input type="range" id="cvCr" min="0.5" max="2" step="0.01" value="1" style="width:100%"><input id="cvC" value="1"></div></div>
+          <div style="color:var(--sub);font-size:12px;line-height:1.8">换算逻辑：人材机按系数调整 → 费用按原隐含费率（费用÷(人工+机械)）重计 → 增值税按原税率重计。材料换价差额＝(新价−原价)×消耗量。</div>
+        </div>
+        <div id="cvOut"><div class="empty">先选择一条定额</div></div>
+      </div>
+    </section>
+
+    <section class="page" id="pg-prices" style="flex-direction:column;padding:24px;gap:16px">
+      <div style="display:flex;gap:12px;align-items:center;flex-wrap:wrap"><div class="searchbox" style="width:420px"><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="priceQ" placeholder="过滤我的价本"></div><span id="priceMeta" style="color:var(--sub);font-size:12px"></span></div>
+      <div style="display:flex;gap:16px;flex:1;min-height:0">
+        <div class="card" style="flex:1;display:flex;flex-direction:column;overflow:hidden">
+          <div style="padding:10px 14px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px">
+            <b style="font-size:13px">官方原文（2026年8月综合价格信息）</b>
+            <button class="btn sm plain" id="pvPrev">←</button><input id="pvPage" value="5" style="width:52px;height:26px;border:1px solid var(--line);border-radius:4px;text-align:center;font-family:var(--mono)"><span style="color:var(--sub);font-size:12px">/ 62</span><button class="btn sm plain" id="pvNext">→</button>
+          </div>
+          <iframe id="pvFrame" src="/tools/render.html?file=/data/raw/wuhan_price_2026-08.ok.pdf&page=5&scale=2" style="flex:1;border:0;background:#555"></iframe>
+        </div>
+        <div style="width:420px;display:flex;flex-direction:column;gap:12px;min-height:0">
+          <div class="cvForm">
+            <b style="font-size:13px">我的价本（录入后自动参与材差联动）</b>
+            <div class="fld"><label>材料名称</label><input id="pmName" placeholder="如：预拌混凝土 C30"></div>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px">
+              <div class="fld"><label>规格</label><input id="pmSpec"></div>
+              <div class="fld"><label>单位</label><input id="pmUnit" placeholder="m3"></div>
+              <div class="fld"><label>除税价</label><input id="pmNoTax"></div>
+              <div class="fld"><label>期号</label><input id="pmPeriod" value="2026-08"></div>
+            </div>
+            <div style="display:flex;gap:8px"><button class="btn sm" id="pmAdd">加入价本</button><button class="btn sm ghost" id="pmBulk">批量导入</button><input type="file" id="pmBulkFile" accept=".xlsx,.xls,.csv" style="display:none"><span style="color:var(--sub);font-size:12px;align-self:center">对照左侧原文页录入</span></div>
+          </div>
+          <div class="card" style="flex:1;overflow:auto"><table><tr><th>名称</th><th>规格</th><th>单位</th><th class="num">除税价</th><th style="width:76px">期号</th><th></th></tr><tbody id="priceBody"></tbody></table></div>
+        </div>
+      </div>
+    </section>
+    <section class="page" id="pg-rules" style="flex-direction:column;padding:24px;gap:16px">
+      <div class="tabs" id="ruleTabs"><button data-rt="desc" class="on">说明规则 · 17,577</button><button data-rt="habits">我的习惯卡</button></div>
+      <div id="ruleDescPane" style="display:flex;flex-direction:column;gap:16px;flex:1;min-height:0">
+        <div class="searchbox" style="width:520px"><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="ruleQ" placeholder="搜说明/系数/换算规则，如：垫层 系数、砂浆 换算"></div>
+        <div class="card" style="flex:1;overflow-y:auto" id="ruleList"></div>
+      </div>
+      <div id="habitPane" style="display:none;flex-direction:column;gap:12px;flex:1;min-height:0">
+        <div class="card" style="flex:1;overflow:auto"><table><tr><th style="width:44px">启用</th><th style="width:26%">名称</th><th>作用范围</th><th>动作</th><th style="width:60px"></th></tr><tbody id="habitList"></tbody></table></div>
+        <div class="cvForm">
+          <b style="font-size:13px">从笔记提炼习惯卡（识别：人工/材料/机械×系数、材料→价格、习惯/默认/易错 行）</b>
+          <div style="display:flex;gap:8px;flex-wrap:wrap"><select id="hbNoteSel" class="sel"></select><button class="btn sm ghost" id="hbExtract">提取候选</button></div>
+          <div style="display:flex;gap:8px;flex-wrap:wrap"><input id="hbScopeCode" placeholder="范围：编号前缀 如 A1" style="height:30px;border:1px solid var(--line);border-radius:6px;padding:0 10px;font-size:12.5px"><input id="hbScopeChapter" placeholder="或 章节 如 第一章砌筑工程" style="height:30px;border:1px solid var(--line);border-radius:6px;padding:0 10px;font-size:12.5px"><input id="hbScopeName" placeholder="或 名称含 如 砖基础" style="height:30px;border:1px solid var(--line);border-radius:6px;padding:0 10px;font-size:12.5px"></div>
+          <div id="hbCands"></div>
+          <button class="btn sm" id="hbSave" style="display:none">勾选的存为习惯卡</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="page" id="pg-notes" style="flex-direction:column;padding:24px;gap:16px">
+      <div style="font-size:14px;font-weight:600">我的定额笔记 <span style="color:var(--sub);font-weight:400;font-size:12px">（本地 notes 目录）</span></div>
+      <div class="card" style="flex:1;overflow-y:auto" id="noteList"></div>
+    </section>
+
+    <section class="page" id="pg-settings" style="flex-direction:column;padding:24px;gap:16px;overflow-y:auto">
+      <div style="font-size:14px;font-weight:600">数据与关于</div>
+      <div id="setBody" style="max-width:680px"></div>
+      <h3 class="sec"><span>数据自检报告（恒等校验）</span></h3>
+      <div id="qaBody" class="card" style="max-width:680px;overflow:auto;max-height:40vh"></div>
+    </section>
+  </div>
+</div>
+
+<div class="mask" id="pickMask"><div class="modal"><header><h3>选择定额子目</h3><button class="btn sm plain" id="pickClose">关闭</button></header><div style="padding:12px 20px 0"><div class="searchbox" style="width:100%"><input id="pickQ" placeholder="编号 / 名称"></div></div><div class="body" id="pickList"></div></div></div>
+
+<div class="mask" id="guideMask"><div class="modal guide"><header><h3>三步上手（30 秒）</h3><button class="btn sm plain" id="guideClose">跳过</button></header><div class="body">
+  <div class="step"><div class="no">1</div><div><h5>查：像搜引擎一样搜定额</h5><p>编号、名称、章节、甚至材料名都能搜（例：搜"混凝土实心砖"反查所有用到它的子目）。按 <b>/</b> 随时聚焦搜索框。</p><div style="margin-top:8px"><button class="btn sm" id="guideGo1">试试搜"砖基础"</button></div></div></div>
+  <div class="step"><div class="no">2</div><div><h5>算：组价工作单自动汇总</h5><p>添加清单行 → 选定额 → 填数量，右侧实时汇总分部分项费、措施费（按专业费率）、增值税与单位工程造价；可换算、可导出 Markdown、可保存。</p><div style="margin-top:8px"><button class="btn sm ghost" id="guideGo2">打开组价单</button></div></div></div>
+  <div class="step"><div class="no">3</div><div><h5>沉淀：笔记与换算记录进 Obsidian</h5><p>每条定额的笔记、每次换算记录都写入 <b>notes 目录</b>（不碰你的知识库），用得越久越懂你的套路。</p></div></div>
+</div></div></div>
+
+<div id="toast"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

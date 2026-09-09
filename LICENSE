@@ -1,0 +1,28 @@
+MIT License
+
+Copyright (c) 2026 定额知识库工作台 contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+DATA NOTICE / 数据声明：
+本仓库仅包含代码（MIT）。定额数据（湖北省2024定额解析结果）、官方 PDF、
+个人价本/工作单/笔记均【不】随仓库分发。使用者请自行从湖北省住建厅官网获取
+官方发布件，并运行 scripts/parse_hubei_pdf.js 与 scripts/parse_all.js 自行生成
+本地数据。官方发布件为政府公开文件，解析结果仅供个人学习研究使用。
