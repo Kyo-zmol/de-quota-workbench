@@ -471,5 +471,5 @@ async function runSettings() { const st = await api('/api/stats'); $('#setBody')
     if (e.ctrlKey && e.key === 's' && S.mod === 'estimate') { e.preventDefault(); saveEstimate(); }
   });
   if (!localStorage.getItem('wb_guide')) $('#guideMask').classList.add('on');
-  go('lookup');
+  go('estimate');
 })();
