@@ -117,6 +117,7 @@ async function renderEstimate() {
   $('#estName').value = e.name;
   $('#taxSel').value = e.tax; $('#specSel').value = e.spec;
   if ($('#diffMode')) $('#diffMode').value = e.diffMode || 'diff-tax';
+  if ($('#surchSel')) $('#surchSel').value = String(e.surchRate != null ? e.surchRate : 0.12);
   const calcs = [];
   for (const r of e.rows) { const cc = await calcRow(r); if (cc) cc.hab = r.code ? (await habitsFor(r.code)).length : 0; calcs.push(cc); }
   const tot = { labor: 0, material: 0, machine: 0, fee: 0, amt: 0, vat: 0 };
@@ -135,8 +136,10 @@ async function renderEstimate() {
   const preTax = tot.amt + meas + otherAmt;
   const vatRate = F ? (F[e.tax] || F.general).vat / 100 : 0.09;
   const vatProj = +(preTax * vatRate).toFixed(2);
-  const grand = +(preTax + vatProj).toFixed(2);
-  S.lastSum = { tot, measQty, meas, otherAmt, preTax, vatProj, grand, vatRate, calcs };
+  const surchRate = S.est.surchRate != null ? +S.est.surchRate : 0.12;
+  const surch = +(vatProj * surchRate).toFixed(2);
+  const grand = +(preTax + vatProj + surch).toFixed(2);
+  S.lastSum = { tot, measQty, meas, otherAmt, preTax, vatProj, surch, surchRate, grand, vatRate, calcs };
   $('#estBody').innerHTML = e.rows.map((r, i) => { const c = calcs[i]; return `<tr data-i="${i}">
     <td style="width:30px" class="num">${i + 1}</td>
     <td style="width:70px"><select data-f="type" style="height:26px;border:1px solid var(--line);border-radius:4px;font-size:11.5px"><option value="fbf" ${(r.type || 'fbf') === 'fbf' ? 'selected' : ''}>分部分项</option><option value="measure" ${r.type === 'measure' ? 'selected' : ''}>单价措施</option><option value="other" ${r.type === 'other' ? 'selected' : ''}>其他项目</option></select></td>
@@ -164,6 +167,7 @@ async function renderEstimate() {
    <div class="sumCard"><h4>汇总（${esc(S.fees ? (F[e.tax] || F.general).label : '')} · 材差口径:${e.diffMode === 'full' ? '全额进' : '只计差·差只计税'}）</h4>
      <div class="sumRow"><span>税前工程造价</span><span class="v">${fmt(preTax)}</span></div>
      <div class="sumRow"><span>增值税 ${(vatRate * 100).toFixed(0)}%（仅计一次）</span><span class="v">${fmt(vatProj)}</span></div>
+     <div class="sumRow"><span>附加税 ${(surchRate * 100).toFixed(0)}%（城建+教育+地方教育）</span><span class="v">${fmt(surch)}</span></div>
      <div class="sumRow total"><span>单位工程造价</span><span class="v">${fmt(grand)}</span></div></div>`;
   bindEst();
 }function bindEst() {
@@ -317,7 +321,7 @@ async function exportXlsx() {
   const e = S.est; if (!e || !S.lastSum) return;
   const s = S.lastSum;
   const rows = e.rows.map((r, i) => ({ boq: r.boq, name: r.name, feature: r.feature, unit: r.unit, qty: r.qty, code: r.code, priceNoTax: s.calcs[i] && !s.calcs[i].other ? s.calcs[i].priceNoTax : (r.amountOther || 0) }));
-  const summary = [['分部分项工程费(不含税)', s.tot.amt], ['措施项目费(不含税)', s.meas], ['其他项目费(不含税)', s.otherAmt], ['税前工程造价', s.preTax], ['增值税', s.vatProj], ['单位工程造价', s.grand]];
+  const summary = [['分部分项工程费(不含税)', s.tot.amt], ['措施项目费(不含税)', s.meas], ['其他项目费(不含税)', s.otherAmt], ['税前工程造价', s.preTax], ['增值税', s.vatProj], ['附加税', s.surch || 0], ['单位工程造价', s.grand]];
   const r = await post('/api/export/xlsx', { rows, summary });
   const bin = atob(r.base64); const u8 = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) u8[i] = bin.charCodeAt(i);
   const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([u8], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' })); a.download = (e.name || '计价表') + '.xlsx'; a.click();
@@ -433,6 +437,7 @@ async function runSettings() { const st = await api('/api/stats'); $('#setBody')
   $('#anaBtn').onclick = showAnalysis;
   $('#cmpBtn').onclick = showCompare;
   $('#diffMode').onchange = e => { S.est.diffMode = e.target.value; renderEstimate(); };
+  $('#surchSel').onchange = e => { S.est.surchRate = +e.target.value; renderEstimate(); };
   $('#projSel').onchange = async e => { if (!e.target.value) return; S.est = await api('/api/project', { id: e.target.value }); renderEstimate(); toast('已载入 ' + S.est.name); };
   $('#estName').onchange = e => { S.est.name = e.target.value; };
   $('#taxSel').onchange = e => { S.est.tax = e.target.value; renderEstimate(); };
@@ -456,6 +461,7 @@ async function runSettings() { const st = await api('/api/stats'); $('#setBody')
   };
   $('#linkPrices').onchange = e => { S.est.linkPrices = e.target.checked; renderEstimate(); };
   $('#diffMode').onchange = e => { S.est.diffMode = e.target.value; renderEstimate(); };
+  $('#surchSel').onchange = e => { S.est.surchRate = +e.target.value; renderEstimate(); };
   $('#periodSel').onchange = e => { S.est.period = e.target.value; Object.keys(matchCache).forEach(k => { if (k.includes('|')) delete matchCache[k]; }); renderEstimate(); };
   api('/api/prices').then(pr => { const ps = [...new Set((pr.items || []).map(x => x.period || '2026-08'))]; $('#periodSel').innerHTML = ps.map(p2 => '<option value="' + esc(p2) + '">' + esc(p2) + ' 期</option>').join(''); });
   $('#cvPick').onclick = () => openPicker(code => { S.cv = { ...S.cv, code, subs: [] }; fillConvert(); });

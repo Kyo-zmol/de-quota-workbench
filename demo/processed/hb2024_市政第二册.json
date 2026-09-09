@@ -1,6 +1,6 @@
 {
  "book": "02市政第二册.pdf",
- "parsedAt": "2026-09-08T14:20:19.712Z",
+ "parsedAt": "2026-09-09T15:03:19.089Z",
  "chapters": [
   {
    "name": "第一章路基处理",
@@ -4581,6 +4581,7 @@
    "section": "三、封层",
    "group": "",
    "fees": {
+    "total": 8092.48,
     "labor": 830.37,
     "material": 4814.08,
     "machine": 903.64,
@@ -4699,6 +4700,7 @@
    "section": "三、封层",
    "group": "",
    "fees": {
+    "total": 10861.72,
     "labor": 917.8,
     "material": 6572.49,
     "machine": 1335.83,
@@ -4817,6 +4819,7 @@
    "section": "三、封层",
    "group": "",
    "fees": {
+    "total": 11688.16,
     "labor": 932.24,
     "material": 7045.01,
     "machine": 1511.17,
