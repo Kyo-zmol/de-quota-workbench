@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: de-quota-workbench
+    runtime: docker
+    plan: free
+    healthCheckPath: /api/stats
+    dockerfilePath: ./Dockerfile

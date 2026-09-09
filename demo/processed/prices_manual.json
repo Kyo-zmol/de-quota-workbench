@@ -1,0 +1,41 @@
+{
+ "period": "2026-08",
+ "items": [
+  {
+   "name": "普通硅酸盐水泥",
+   "spec": "散装 42.5",
+   "unit": "吨",
+   "noTax": 277.39,
+   "period": "2026-08",
+   "ok": true,
+   "sample": true
+  },
+  {
+   "name": "天然砂",
+   "spec": "中、粗",
+   "unit": "立方米",
+   "noTax": 155.29,
+   "period": "2026-08",
+   "ok": true,
+   "sample": true
+  },
+  {
+   "name": "机制砂",
+   "spec": "综合",
+   "unit": "立方米",
+   "noTax": 91.73,
+   "period": "2026-08",
+   "ok": true,
+   "sample": true
+  },
+  {
+   "name": "预拌混凝土",
+   "spec": "C20",
+   "unit": "m3",
+   "noTax": 402.52,
+   "period": "2026-08",
+   "ok": true,
+   "sample": true
+  }
+ ]
+}

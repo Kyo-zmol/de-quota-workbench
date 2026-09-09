@@ -7,3 +7,7 @@ artifacts/
 desktop/
 *.log
 .edge-profile/
+
+node_modules/
+00-三视频解析与搭建方案.md
+

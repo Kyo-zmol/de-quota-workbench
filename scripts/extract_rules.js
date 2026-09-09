@@ -1,7 +1,7 @@
 // extract_rules.js — 抽取各册"说明/计算规则/系数"文本库
 const path = require('path');
 const fs = require('fs');
-const NM = 'C:\\Users\\Yzd18\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules';
+const NM = process.env.NM_DIR || path.join(__dirname, '..', 'node_modules');
 const RAW = 'F:\\我\\知识库\\01-Projects\\定额知识库工作台\\data\\raw';
 const OUT = 'F:\\我\\知识库\\01-Projects\\定额知识库工作台\\data\\processed\\rules_all.json';
 const BOOKS = fs.readdirSync(RAW).filter(f => f.endsWith('.pdf') && !f.includes('费用定额') && !f.includes('结构·屋面）'));

@@ -2,7 +2,7 @@
 const { spawn } = require('child_process');
 const path = require('path');
 const fs = require('fs');
-const NODE = 'C:\\Users\\Yzd18\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\bin\\node.exe';
+const NODE = process.execPath;
 const ROOT = path.resolve(__dirname, '..');
 const RAW = path.join(ROOT, 'data', 'raw');
 const PROC = path.join(ROOT, 'data', 'processed');

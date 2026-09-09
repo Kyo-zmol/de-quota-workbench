@@ -1,7 +1,7 @@
 // parse_hubei_pdf.js v4
 const path = require('path');
 const fs = require('fs');
-const NM = process.env.NM_DIR || 'C:\\Users\\Yzd18\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules';
+const NM = process.env.NM_DIR || path.join(__dirname, '..', 'node_modules');
 const norm = s => s.normalize('NFKC').replace(/[\u2043\u2010\u2011\u2012\u2013\u2014\u2212]/g, '-').replace(/\s+/g, ' ').trim();
 const isNum = s => /^-?\d+(\.\d+)?$/.test(s);
 const toNum = s => { const v = parseFloat(s); return isNaN(v) ? null : v; };

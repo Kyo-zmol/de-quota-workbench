@@ -9,7 +9,12 @@ COPY app/public ./public
 RUN npm install jszip pdfjs-dist --no-audit --no-fund
 ENV NM_DIR=/app/node_modules
 COPY scripts ./scripts
+COPY demo ./demo
 ENV WB_ROOT=/data
+# 作品集演示默认用随仓样本集；自有全量数据请挂载 /data 并覆盖以下三变量
+ENV WB_PROC=/app/demo/processed
+ENV WB_NOTES=/app/demo/notes
+ENV WB_PROJ=/app/demo/projects
 ENV PORT=8730
 EXPOSE 8730
 CMD ["node", "server.js"]

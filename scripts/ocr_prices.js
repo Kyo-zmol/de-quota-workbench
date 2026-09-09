@@ -1,7 +1,7 @@
 // ocr_prices.js v3 — 竖线检测定列 + TSV 行 + 小数点修复 + 税率校验
 const path = require('path');
 const fs = require('fs');
-const NM = process.env.NM_DIR || 'C:\\Users\\Yzd18\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules';
+const NM = process.env.NM_DIR || path.join(__dirname, '..', 'node_modules');
 const { createWorker } = require(path.join(NM, 'tesseract.js'));
 const sharp = require(path.join(NM, 'sharp'));
 const PP = 'F:\\我\\定额知识库工作台\\artifacts\\pp2';

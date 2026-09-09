@@ -1,0 +1,4023 @@
+{
+ "book": "湖北省园林绿化工程消耗量定额及全费用基价表（2024）.pdf",
+ "parsedAt": "2026-09-08T14:23:20.188Z",
+ "chapters": [
+  {
+   "name": "第一章绿化工程",
+   "sections": [
+    "一、绿地整理",
+    "四、边坡绿化",
+    "二、栽植花木",
+    "三、绿化成活养护及保存养护",
+    "五、节水灌溉",
+    "五、屋面绿化",
+    "六、节水灌溉",
+    "一、二年生草本花块根、宿根类",
+    "三、绿化养护"
+   ]
+  },
+  {
+   "name": "第二章园路、园桥工程",
+   "sections": [
+    "一、适用范围",
+    "二、园路",
+    "三、园桥",
+    "四、驳岸、护岸",
+    "一、园路",
+    "二、园桥",
+    "三、驳岸、护岸",
+    "一、园路工程",
+    "二、园桥工程"
+   ]
+  },
+  {
+   "name": "第三章园林景观工程",
+   "sections": [
+    "四、园林桌椅",
+    "一、堆塑假山",
+    "二、亭廊屋面",
+    "三、花架",
+    "五、杂项"
+   ]
+  },
+  {
+   "name": "第四章措施项目",
+   "sections": [
+    "二、模板工程",
+    "三、树木支撑架、草绳绕树干、搭设遮阴(防寒)棚工程",
+    "四、花木废弃物运输",
+    "一、脚手架工程",
+    "五、其它"
+   ]
+  },
+  {
+   "name": "第五章园林日常养护",
+   "sections": [
+    "二、其他绿地养护",
+    "三、名词解释",
+    "一、绿地养护。",
+    "二、其他绿地养护。",
+    "三、建筑、小品维护",
+    "四、保障措施项目。",
+    "三、建筑、小品维护。",
+    "一、绿地养护",
+    "四、保障措施项目",
+    "一、绿化工程土方量对照表",
+    "二、城市园林绿化养护管理质量要求",
+    "一、树木管理",
+    "二、绿地管理",
+    "三、草坪管理",
+    "四、草花管理",
+    "五、园林设施管理",
+    "六、病虫害防治"
+   ]
+  }
+ ],
+ "items": [
+  {
+   "code": "E1-1",
+   "name": "人工砍伐乔木",
+   "spec": "10",
+   "unit": "株",
+   "work": "锯倒、砍枝、截断、就近堆放整齐、清理场地。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 6.43,
+    "labor": 4.8,
+    "material": 0.19,
+    "machine": 0.29,
+    "fee": 0.62,
+    "vat": 0.53
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.025
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.001
+    }
+   ],
+   "page": 25
+  },
+  {
+   "code": "E1-2",
+   "name": "人工砍伐乔木",
+   "spec": "20",
+   "unit": "株",
+   "work": "锯倒、砍枝、截断、就近堆放整齐、清理场地。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 18.04,
+    "labor": 14.3,
+    "material": 0.19,
+    "machine": 0.29,
+    "fee": 1.77,
+    "vat": 1.49
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.025
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.001
+    }
+   ],
+   "page": 25
+  },
+  {
+   "code": "E1-3",
+   "name": "人工砍伐乔木",
+   "spec": "30",
+   "unit": "株",
+   "work": "锯倒、砍枝、截断、就近堆放整齐、清理场地。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 38.04,
+    "labor": 30.66,
+    "material": 0.19,
+    "machine": 0.29,
+    "fee": 3.76,
+    "vat": 3.14
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.025
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.001
+    }
+   ],
+   "page": 25
+  },
+  {
+   "code": "E1-4",
+   "name": "人工砍伐乔木",
+   "spec": "40",
+   "unit": "株",
+   "work": "锯倒、砍枝、截断、就近堆放整齐、清理场地。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 75.94,
+    "labor": 61.2,
+    "material": 0.39,
+    "machine": 0.57,
+    "fee": 7.51,
+    "vat": 6.27
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.051
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.002
+    }
+   ],
+   "page": 25
+  },
+  {
+   "code": "E1-5",
+   "name": "人工砍伐乔木",
+   "spec": "",
+   "unit": "株",
+   "work": "锯倒、砍枝、截断、就近堆放整齐、清理场地。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 112.16,
+    "labor": 90.83,
+    "material": 0.39,
+    "machine": 0.57,
+    "fee": 11.11,
+    "vat": 9.26
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.051
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.002
+    }
+   ],
+   "page": 25
+  },
+  {
+   "code": "E1-6",
+   "name": "地径( c",
+   "spec": "m以外) 50",
+   "unit": "株",
+   "work": "锯倒、砍枝、截断、就近堆放整齐、清理场地。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 251.19,
+    "labor": 203.63,
+    "material": 0.78,
+    "machine": 1.14,
+    "fee": 24.9,
+    "vat": 20.74
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.102
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.004
+    }
+   ],
+   "page": 25
+  },
+  {
+   "code": "E1-7",
+   "name": "人工挖树根 地径( cm以内)",
+   "spec": "10",
+   "unit": "株",
+   "work": "起挖、截断、就近堆放整齐、清理场地。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 9.09,
+    "labor": 6.98,
+    "material": 0.19,
+    "machine": 0.29,
+    "fee": 0.88,
+    "vat": 0.75
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.025
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.001
+    }
+   ],
+   "page": 26
+  },
+  {
+   "code": "E1-8",
+   "name": "人工挖树根 地径( cm以内)",
+   "spec": "20",
+   "unit": "株",
+   "work": "起挖、截断、就近堆放整齐、清理场地。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 19.02,
+    "labor": 15.1,
+    "material": 0.19,
+    "machine": 0.29,
+    "fee": 1.87,
+    "vat": 1.57
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.025
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.001
+    }
+   ],
+   "page": 26
+  },
+  {
+   "code": "E1-9",
+   "name": "人工挖树根 地径( cm以内)",
+   "spec": "30",
+   "unit": "株",
+   "work": "起挖、截断、就近堆放整齐、清理场地。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 64.89,
+    "labor": 52.62,
+    "material": 0.19,
+    "machine": 0.29,
+    "fee": 6.43,
+    "vat": 5.36
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.025
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.001
+    }
+   ],
+   "page": 26
+  },
+  {
+   "code": "E1-10",
+   "name": "人工挖树根 地径( cm以内)",
+   "spec": "40",
+   "unit": "株",
+   "work": "起挖、截断、就近堆放整齐、清理场地。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 130.35,
+    "labor": 105.25,
+    "material": 0.58,
+    "machine": 0.86,
+    "fee": 12.9,
+    "vat": 10.76
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.076
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.003
+    }
+   ],
+   "page": 26
+  },
+  {
+   "code": "E1-11",
+   "name": "人工挖树根 地径( cm以内)",
+   "spec": "",
+   "unit": "株",
+   "work": "起挖、截断、就近堆放整齐、清理场地。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 186.16,
+    "labor": 150.44,
+    "material": 0.78,
+    "machine": 1.14,
+    "fee": 18.43,
+    "vat": 15.37
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.102
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.004
+    }
+   ],
+   "page": 26
+  },
+  {
+   "code": "E1-12",
+   "name": "地径( cm以外)",
+   "spec": "50",
+   "unit": "株",
+   "work": "起挖、截断、就近堆放整齐、清理场地。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 260.02,
+    "labor": 210.38,
+    "material": 0.98,
+    "machine": 1.43,
+    "fee": 25.76,
+    "vat": 21.47
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.127
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.005
+    }
+   ],
+   "page": 26
+  },
+  {
+   "code": "E1-13",
+   "name": "砍挖灌木丛及根 冠丛高( cm以内)",
+   "spec": "100",
+   "unit": "100株",
+   "work": "砍枝、起土挖根、就近堆放整齐、清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 173.46,
+    "labor": 137.74,
+    "material": 1.76,
+    "machine": 2.58,
+    "fee": 17.06,
+    "vat": 14.32
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.229
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.009
+    }
+   ],
+   "page": 27
+  },
+  {
+   "code": "E1-14",
+   "name": "砍挖灌木丛及根 冠丛高( cm以内)",
+   "spec": "150",
+   "unit": "100株",
+   "work": "砍枝、起土挖根、就近堆放整齐、清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 346.93,
+    "labor": 275.48,
+    "material": 3.53,
+    "machine": 5.15,
+    "fee": 34.12,
+    "vat": 28.65
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.459
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.018
+    }
+   ],
+   "page": 27
+  },
+  {
+   "code": "E1-15",
+   "name": "砍挖灌木丛及根 冠丛高( cm以内)",
+   "spec": "200",
+   "unit": "100株",
+   "work": "砍枝、起土挖根、就近堆放整齐、清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 605.7,
+    "labor": 482.08,
+    "material": 5.68,
+    "machine": 8.3,
+    "fee": 59.63,
+    "vat": 50.01
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.739
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.029
+    }
+   ],
+   "page": 27
+  },
+  {
+   "code": "E1-16",
+   "name": "砍挖灌木丛及根 冠丛高( cm以内)",
+   "spec": "250",
+   "unit": "100株",
+   "work": "砍枝、起土挖根、就近堆放整齐、清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 1040.61,
+    "labor": 826.31,
+    "material": 10.57,
+    "machine": 15.45,
+    "fee": 102.36,
+    "vat": 85.92
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 1.376
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.054
+    }
+   ],
+   "page": 27
+  },
+  {
+   "code": "E1-17",
+   "name": "砍挖片植灌木和绿篱",
+   "spec": "",
+   "unit": "100m",
+   "work": "砍枝、起土挖根、就近堆放整齐、清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 684.39,
+    "labor": 306.02,
+    "material": 107.82,
+    "machine": 157.66,
+    "fee": 56.38,
+    "vat": 56.51
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 14.039
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.551
+    }
+   ],
+   "page": 28
+  },
+  {
+   "code": "E1-18",
+   "name": "砍挖散生竹胸径( cm以内)",
+   "spec": "2",
+   "unit": "",
+   "work": "起土挖根、就近堆放整齐、清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 126.7,
+    "labor": 70.93,
+    "material": 13.89,
+    "machine": 20.32,
+    "fee": 11.1,
+    "vat": 10.46
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 1.809
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.071
+    }
+   ],
+   "page": 29
+  },
+  {
+   "code": "E1-19",
+   "name": "砍挖散生竹胸径( cm以内)",
+   "spec": "4",
+   "unit": "",
+   "work": "起土挖根、就近堆放整齐、清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 178.53,
+    "labor": 101.36,
+    "material": 18.98,
+    "machine": 27.75,
+    "fee": 15.7,
+    "vat": 14.74
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 2.472
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.097
+    }
+   ],
+   "page": 29
+  },
+  {
+   "code": "E1-20",
+   "name": "砍挖散生竹胸径( cm以内)",
+   "spec": "6 100株",
+   "unit": "",
+   "work": "起土挖根、就近堆放整齐、清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 250.83,
+    "labor": 144.83,
+    "material": 25.64,
+    "machine": 37.48,
+    "fee": 22.17,
+    "vat": 20.71
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 3.338
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.131
+    }
+   ],
+   "page": 29
+  },
+  {
+   "code": "E1-21",
+   "name": "砍挖散生竹胸径( cm以内)",
+   "spec": "8",
+   "unit": "",
+   "work": "起土挖根、就近堆放整齐、清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 353.09,
+    "labor": 206.84,
+    "material": 34.83,
+    "machine": 50.93,
+    "fee": 31.34,
+    "vat": 29.15
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 4.535
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.178
+    }
+   ],
+   "page": 29
+  },
+  {
+   "code": "E1-22",
+   "name": "砍挖散生竹胸径( cm以内)",
+   "spec": "10",
+   "unit": "",
+   "work": "起土挖根、就近堆放整齐、清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 496.97,
+    "labor": 295.5,
+    "material": 47.16,
+    "machine": 68.96,
+    "fee": 44.32,
+    "vat": 41.03
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 6.141
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.241
+    }
+   ],
+   "page": 29
+  },
+  {
+   "code": "E1-23",
+   "name": "砍挖竹及根",
+   "spec": "10m",
+   "unit": "",
+   "work": "起土挖根、就近堆放整齐、清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "1.伐树及清除地表植物",
+   "fees": {
+    "total": 86.3,
+    "labor": 68.75,
+    "material": 0.78,
+    "machine": 1.14,
+    "fee": 8.5,
+    "vat": 7.13
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.102
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.004
+    }
+   ],
+   "page": 29
+  },
+  {
+   "code": "E1-24",
+   "name": "砍挖芦苇及根",
+   "spec": "",
+   "unit": "",
+   "work": "1.砍挖芦苇及根∶起土挖根、就近堆放、整齐清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "3.清除地被∶挖根、就近堆放、整齐清理场地等。计量单位:10m",
+   "fees": {
+    "total": 83.64,
+    "labor": 66.58,
+    "material": 0.78,
+    "machine": 1.14,
+    "fee": 8.23,
+    "vat": 6.91
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.102
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.004
+    }
+   ],
+   "page": 30
+  },
+  {
+   "code": "E1-25",
+   "name": "清除草皮",
+   "spec": "",
+   "unit": "",
+   "work": "1.砍挖芦苇及根∶起土挖根、就近堆放、整齐清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "3.清除地被∶挖根、就近堆放、整齐清理场地等。计量单位:10m",
+   "fees": {
+    "total": 21.26,
+    "labor": 16.93,
+    "material": 0.19,
+    "machine": 0.29,
+    "fee": 2.09,
+    "vat": 1.76
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.025
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.001
+    }
+   ],
+   "page": 30
+  },
+  {
+   "code": "E1-26",
+   "name": "清除地被植物",
+   "spec": "",
+   "unit": "",
+   "work": "1.砍挖芦苇及根∶起土挖根、就近堆放、整齐清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "3.清除地被∶挖根、就近堆放、整齐清理场地等。计量单位:10m",
+   "fees": {
+    "total": 23.36,
+    "labor": 18.65,
+    "material": 0.19,
+    "machine": 0.29,
+    "fee": 2.3,
+    "vat": 1.93
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 0.025
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.001
+    }
+   ],
+   "page": 30
+  },
+  {
+   "code": "E1-27",
+   "name": "铲挖水生植物",
+   "spec": "",
+   "unit": "100m",
+   "work": "铲挖、就近堆放、整齐清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "3.清除地被∶挖根、就近堆放、整齐清理场地等。计量单位:10m",
+   "fees": {
+    "total": 395.48,
+    "labor": 223.08,
+    "material": 42.66,
+    "machine": 62.38,
+    "fee": 34.71,
+    "vat": 32.65
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "汽油【机械】",
+     "unit": "kg",
+     "price": 7.68,
+     "qty": 5.555
+    },
+    {
+     "cat": "机械",
+     "name": "载重汽车4t",
+     "unit": "台班",
+     "price": 286.13,
+     "qty": 0.218
+    }
+   ],
+   "page": 31
+  },
+  {
+   "code": "E1-28",
+   "name": "地面换土",
+   "spec": "",
+   "unit": "m",
+   "work": "土厚30cm内的挖、填,场内50m内取、运土,清理场地。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.种植土换填",
+   "fees": {
+    "total": 35.99,
+    "labor": 21.28,
+    "material": 1.92,
+    "machine": 6.45,
+    "fee": 3.37,
+    "vat": 2.97
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】 3 履带式单斗液压挖掘机0.4m",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 0.011
+    }
+   ],
+   "page": 32
+  },
+  {
+   "code": "E1-29",
+   "name": "人工抽槽",
+   "spec": "m",
+   "unit": "",
+   "work": "1.挖土,装土,场内50m内就近堆放,修整边底。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 52.58,
+    "labor": 43.01,
+    "material": null,
+    "fee": 5.23,
+    "vat": 4.34
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "柴油【机械】 3 履带式单斗液压挖掘机0.6m",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "履带式推土机75kW 注:人工抽槽按四类土考虑,如三类土抽槽,乘以系数",
+     "unit": "台班",
+     "price": 551.18,
+     "qty": null
+    }
+   ],
+   "page": 33
+  },
+  {
+   "code": "E1-30",
+   "name": "机械抽槽",
+   "spec": "1000m",
+   "unit": "",
+   "work": "1.挖土,装土,场内50m内就近堆放,修整边底。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 16971.42,
+    "labor": 1693.12,
+    "material": 4325.49,
+    "machine": 8332.4,
+    "fee": 1219.1,
+    "vat": 1401.31
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "柴油【机械】 3 履带式单斗液压挖掘机0.6m",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 7.373
+    },
+    {
+     "cat": "机械",
+     "name": "履带式推土机75kW 注:人工抽槽按四类土考虑,如三类土抽槽,乘以系数",
+     "unit": "台班",
+     "price": 551.18,
+     "qty": 6.495
+    }
+   ],
+   "page": 33
+  },
+  {
+   "code": "E1-31",
+   "name": "人工回填种植土",
+   "spec": "",
+   "unit": "10m",
+   "work": "取土、碎土、分层回填、耙细、平整、清除杂物、集中堆放、清理现场、排地表水等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 209.79,
+    "labor": 171.6,
+    "material": null,
+    "machine": null,
+    "fee": 20.87,
+    "vat": 17.32
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "履带式推土机105kW",
+     "unit": "台班",
+     "price": 643.92,
+     "qty": null
+    }
+   ],
+   "page": 34
+  },
+  {
+   "code": "E1-32",
+   "name": "机械回填种植土",
+   "spec": "",
+   "unit": "10m",
+   "work": "取土、碎土、分层回填、耙细、平整、清除杂物、集中堆放、清理现场、排地表水等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 83.58,
+    "labor": 6.86,
+    "material": 25.65,
+    "machine": 38.64,
+    "fee": 5.53,
+    "vat": 6.9
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 3.648
+    },
+    {
+     "cat": "机械",
+     "name": "履带式推土机105kW",
+     "unit": "台班",
+     "price": 643.92,
+     "qty": 0.06
+    }
+   ],
+   "page": 34
+  },
+  {
+   "code": "E1-33",
+   "name": "带土球乔、灌木换土",
+   "spec": "20",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 2.52,
+    "labor": 2.06,
+    "material": null,
+    "machine": null,
+    "fee": 0.25,
+    "vat": 0.21
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 35
+  },
+  {
+   "code": "E1-34",
+   "name": "带土球乔、灌木换土",
+   "spec": "30",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 5.17,
+    "labor": 4.23,
+    "material": null,
+    "machine": null,
+    "fee": 0.51,
+    "vat": 0.43
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 35
+  },
+  {
+   "code": "E1-35",
+   "name": "带土球乔、灌木换土",
+   "spec": "40",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 6.57,
+    "labor": 5.38,
+    "material": null,
+    "machine": null,
+    "fee": 0.65,
+    "vat": 0.54
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 35
+  },
+  {
+   "code": "E1-36",
+   "name": "带土球乔、灌木换土",
+   "spec": "50",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 10.49,
+    "labor": 8.58,
+    "material": null,
+    "machine": null,
+    "fee": 1.04,
+    "vat": 0.87
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 35
+  },
+  {
+   "code": "E1-37",
+   "name": "带土球乔、灌木换土",
+   "spec": "60",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 18.18,
+    "labor": 14.87,
+    "material": null,
+    "machine": null,
+    "fee": 1.81,
+    "vat": 1.5
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 35
+  },
+  {
+   "code": "E1-38",
+   "name": "带土球乔、灌木换土",
+   "spec": "70",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 27.13,
+    "labor": 22.19,
+    "material": null,
+    "machine": null,
+    "fee": 2.7,
+    "vat": 2.24
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 36
+  },
+  {
+   "code": "E1-39",
+   "name": "带土球乔、灌木换土",
+   "spec": "80",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 40.13,
+    "labor": 32.83,
+    "material": null,
+    "machine": null,
+    "fee": 3.99,
+    "vat": 3.31
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 36
+  },
+  {
+   "code": "E1-40",
+   "name": "带土球乔、灌木换土",
+   "spec": "100",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 64.76,
+    "labor": 52.97,
+    "material": null,
+    "machine": null,
+    "fee": 6.44,
+    "vat": 5.35
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 36
+  },
+  {
+   "code": "E1-41",
+   "name": "带土球乔、灌木换土",
+   "spec": "120",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 93.14,
+    "labor": 76.19,
+    "material": null,
+    "machine": null,
+    "fee": 9.26,
+    "vat": 7.69
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 36
+  },
+  {
+   "code": "E1-42",
+   "name": "带土球乔、灌木换土",
+   "spec": "140",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 124.34,
+    "labor": 101.7,
+    "material": null,
+    "machine": null,
+    "fee": 12.37,
+    "vat": 10.27
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 36
+  },
+  {
+   "code": "E1-43",
+   "name": "带土球乔、灌木换土",
+   "spec": "160",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 169.65,
+    "labor": 138.77,
+    "material": null,
+    "machine": null,
+    "fee": 16.87,
+    "vat": 14.01
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 37
+  },
+  {
+   "code": "E1-44",
+   "name": "带土球乔、灌木换土",
+   "spec": "180",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 199.44,
+    "labor": 163.13,
+    "material": null,
+    "machine": null,
+    "fee": 19.84,
+    "vat": 16.47
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 37
+  },
+  {
+   "code": "E1-45",
+   "name": "带土球乔、灌木换土",
+   "spec": "200",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 248.53,
+    "labor": 203.29,
+    "material": null,
+    "machine": null,
+    "fee": 24.72,
+    "vat": 20.52
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 37
+  },
+  {
+   "code": "E1-46",
+   "name": "带土球乔、灌木换土",
+   "spec": "240",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 396.08,
+    "labor": 323.98,
+    "material": null,
+    "machine": null,
+    "fee": 39.4,
+    "vat": 32.7
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 37
+  },
+  {
+   "code": "E1-47",
+   "name": "带土球乔、灌木换土",
+   "spec": "280",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 607.26,
+    "labor": 496.72,
+    "material": null,
+    "machine": null,
+    "fee": 60.4,
+    "vat": 50.14
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 37
+  },
+  {
+   "code": "E1-48",
+   "name": "裸根乔木换土",
+   "spec": "4",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 3.22,
+    "labor": 2.63,
+    "material": null,
+    "machine": null,
+    "fee": 0.32,
+    "vat": 0.27
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 38
+  },
+  {
+   "code": "E1-49",
+   "name": "裸根乔木换土",
+   "spec": "6",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 8.67,
+    "labor": 7.09,
+    "material": null,
+    "machine": null,
+    "fee": 0.86,
+    "vat": 0.72
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 38
+  },
+  {
+   "code": "E1-50",
+   "name": "裸根乔木换土",
+   "spec": "8",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 22.38,
+    "labor": 18.3,
+    "material": null,
+    "machine": null,
+    "fee": 2.23,
+    "vat": 1.85
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 38
+  },
+  {
+   "code": "E1-51",
+   "name": "裸根乔木换土",
+   "spec": "10",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 39.44,
+    "labor": 32.26,
+    "material": null,
+    "machine": null,
+    "fee": 3.92,
+    "vat": 3.26
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 38
+  },
+  {
+   "code": "E1-52",
+   "name": "裸根乔木换土",
+   "spec": "12",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 49.08,
+    "labor": 40.15,
+    "material": null,
+    "machine": null,
+    "fee": 4.88,
+    "vat": 4.05
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 38
+  },
+  {
+   "code": "E1-53",
+   "name": "裸根乔木换土",
+   "spec": "14",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 64.06,
+    "labor": 52.4,
+    "material": null,
+    "machine": null,
+    "fee": 6.37,
+    "vat": 5.29
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 39
+  },
+  {
+   "code": "E1-54",
+   "name": "裸根乔木换土",
+   "spec": "16",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 72.58,
+    "labor": 59.37,
+    "material": null,
+    "machine": null,
+    "fee": 7.22,
+    "vat": 5.99
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 39
+  },
+  {
+   "code": "E1-55",
+   "name": "裸根乔木换土",
+   "spec": "18",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 102.53,
+    "labor": 83.86,
+    "material": null,
+    "machine": null,
+    "fee": 10.2,
+    "vat": 8.47
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 39
+  },
+  {
+   "code": "E1-56",
+   "name": "裸根乔木换土",
+   "spec": "20",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 122.79,
+    "labor": 100.44,
+    "material": null,
+    "machine": null,
+    "fee": 12.21,
+    "vat": 10.14
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 39
+  },
+  {
+   "code": "E1-57",
+   "name": "裸根乔木换土",
+   "spec": "24",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 196.49,
+    "labor": 160.73,
+    "material": null,
+    "machine": null,
+    "fee": 19.54,
+    "vat": 16.22
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 39
+  },
+  {
+   "code": "E1-58",
+   "name": "裸根乔木换土",
+   "spec": "30",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 250.91,
+    "labor": 205.23,
+    "material": null,
+    "machine": null,
+    "fee": 24.96,
+    "vat": 20.72
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 40
+  },
+  {
+   "code": "E1-59",
+   "name": "裸根乔木换土",
+   "spec": "35",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 314.97,
+    "labor": 257.63,
+    "material": null,
+    "machine": null,
+    "fee": 31.33,
+    "vat": 26.01
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 40
+  },
+  {
+   "code": "E1-60",
+   "name": "裸根乔木换土",
+   "spec": "40",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 389.65,
+    "labor": 318.72,
+    "material": null,
+    "machine": null,
+    "fee": 38.76,
+    "vat": 32.17
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 40
+  },
+  {
+   "code": "E1-61",
+   "name": "裸根乔木换土",
+   "spec": "45",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 445.18,
+    "labor": 364.14,
+    "material": null,
+    "machine": null,
+    "fee": 44.28,
+    "vat": 36.76
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 40
+  },
+  {
+   "code": "E1-62",
+   "name": "裸根乔木换土",
+   "spec": "50",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 500.69,
+    "labor": 409.55,
+    "material": null,
+    "machine": null,
+    "fee": 49.8,
+    "vat": 41.34
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 41
+  },
+  {
+   "code": "E1-63",
+   "name": "裸根乔木换土",
+   "spec": "55",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 556.22,
+    "labor": 454.97,
+    "material": null,
+    "machine": null,
+    "fee": 55.32,
+    "vat": 45.93
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 41
+  },
+  {
+   "code": "E1-64",
+   "name": "棕榈类换土",
+   "spec": "15",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 10.49,
+    "labor": 8.58,
+    "material": null,
+    "machine": null,
+    "fee": 1.04,
+    "vat": 0.87
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 42
+  },
+  {
+   "code": "E1-65",
+   "name": "棕榈类换土",
+   "spec": "20",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 18.18,
+    "labor": 14.87,
+    "material": null,
+    "machine": null,
+    "fee": 1.81,
+    "vat": 1.5
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 42
+  },
+  {
+   "code": "E1-66",
+   "name": "棕榈类换土",
+   "spec": "25",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 40.13,
+    "labor": 32.83,
+    "material": null,
+    "machine": null,
+    "fee": 3.99,
+    "vat": 3.31
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 42
+  },
+  {
+   "code": "E1-67",
+   "name": "棕榈类换土",
+   "spec": "30",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 52.45,
+    "labor": 42.9,
+    "material": null,
+    "machine": null,
+    "fee": 5.22,
+    "vat": 4.33
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 42
+  },
+  {
+   "code": "E1-68",
+   "name": "棕榈类换土",
+   "spec": "35",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 64.76,
+    "labor": 52.97,
+    "material": null,
+    "machine": null,
+    "fee": 6.44,
+    "vat": 5.35
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 42
+  },
+  {
+   "code": "E1-69",
+   "name": "棕榈类换土",
+   "spec": "40",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 93.14,
+    "labor": 76.19,
+    "material": null,
+    "machine": null,
+    "fee": 9.26,
+    "vat": 7.69
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 42
+  },
+  {
+   "code": "E1-70",
+   "name": "棕榈类换土",
+   "spec": "45",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 124.34,
+    "labor": 101.7,
+    "material": null,
+    "machine": null,
+    "fee": 12.37,
+    "vat": 10.27
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 43
+  },
+  {
+   "code": "E1-71",
+   "name": "棕榈类换土",
+   "spec": "50",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 169.65,
+    "labor": 138.77,
+    "material": null,
+    "machine": null,
+    "fee": 16.87,
+    "vat": 14.01
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 43
+  },
+  {
+   "code": "E1-72",
+   "name": "棕榈类换土",
+   "spec": "55",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 184.47,
+    "labor": 150.89,
+    "material": null,
+    "machine": null,
+    "fee": 18.35,
+    "vat": 15.23
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 43
+  },
+  {
+   "code": "E1-73",
+   "name": "棕榈类换土",
+   "spec": "60",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 199.44,
+    "labor": 163.13,
+    "material": null,
+    "machine": null,
+    "fee": 19.84,
+    "vat": 16.47
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 43
+  },
+  {
+   "code": "E1-74",
+   "name": "棕榈类换土",
+   "spec": "70",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 248.53,
+    "labor": 203.29,
+    "material": null,
+    "machine": null,
+    "fee": 24.72,
+    "vat": 20.52
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 43
+  },
+  {
+   "code": "E1-75",
+   "name": "棕榈类换土",
+   "spec": "80",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 396.08,
+    "labor": 323.98,
+    "material": null,
+    "machine": null,
+    "fee": 39.4,
+    "vat": 32.7
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 43
+  },
+  {
+   "code": "E1-76",
+   "name": "裸根灌木换土",
+   "spec": "50",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 1.26,
+    "labor": 1.03,
+    "material": null,
+    "machine": null,
+    "fee": 0.13,
+    "vat": 0.1
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 44
+  },
+  {
+   "code": "E1-77",
+   "name": "裸根灌木换土",
+   "spec": "100",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 2.52,
+    "labor": 2.06,
+    "material": null,
+    "machine": null,
+    "fee": 0.25,
+    "vat": 0.21
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 44
+  },
+  {
+   "code": "E1-78",
+   "name": "裸根灌木换土",
+   "spec": "150",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 5.17,
+    "labor": 4.23,
+    "material": null,
+    "machine": null,
+    "fee": 0.51,
+    "vat": 0.43
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 44
+  },
+  {
+   "code": "E1-79",
+   "name": "裸根灌木换土",
+   "spec": "200",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 16.79,
+    "labor": 13.73,
+    "material": null,
+    "machine": null,
+    "fee": 1.67,
+    "vat": 1.39
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 44
+  },
+  {
+   "code": "E1-80",
+   "name": "裸根灌木换土",
+   "spec": "250",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 32.45,
+    "labor": 26.54,
+    "material": null,
+    "machine": null,
+    "fee": 3.23,
+    "vat": 2.68
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 44
+  },
+  {
+   "code": "E1-81",
+   "name": "散生竹换土",
+   "spec": "2",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 3.91,
+    "labor": 3.2,
+    "machine": null,
+    "fee": 0.39,
+    "vat": 0.32
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 45
+  },
+  {
+   "code": "E1-82",
+   "name": "散生竹换土",
+   "spec": "4",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 9.36,
+    "labor": 7.66,
+    "machine": null,
+    "fee": 0.93,
+    "vat": 0.77
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 45
+  },
+  {
+   "code": "E1-83",
+   "name": "散生竹换土",
+   "spec": "6",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 14.68,
+    "labor": 12.01,
+    "machine": null,
+    "fee": 1.46,
+    "vat": 1.21
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 45
+  },
+  {
+   "code": "E1-84",
+   "name": "散生竹换土",
+   "spec": "8",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 30.77,
+    "labor": 25.17,
+    "machine": null,
+    "fee": 3.06,
+    "vat": 2.54
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 45
+  },
+  {
+   "code": "E1-85",
+   "name": "散生竹换土",
+   "spec": "",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 44.06,
+    "labor": 36.04,
+    "machine": null,
+    "fee": 4.38,
+    "vat": 3.64
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 45
+  },
+  {
+   "code": "E1-86",
+   "name": "胸径( c",
+   "spec": "m以外) 10",
+   "unit": "株",
+   "work": "装、运土到塘边,原土场内50m内就近堆放,清理场地等。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 74.69,
+    "labor": 61.09,
+    "machine": null,
+    "fee": 7.43,
+    "vat": 6.17
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 45
+  },
+  {
+   "code": "E1-87",
+   "name": "丛生竹换土",
+   "spec": "30",
+   "unit": "丛",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 5.17,
+    "labor": 4.23,
+    "material": null,
+    "machine": null,
+    "fee": 0.51,
+    "vat": 0.43
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 46
+  },
+  {
+   "code": "E1-88",
+   "name": "丛生竹换土",
+   "spec": "40",
+   "unit": "丛",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 6.86,
+    "labor": 5.61,
+    "material": null,
+    "machine": null,
+    "fee": 0.68,
+    "vat": 0.57
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 46
+  },
+  {
+   "code": "E1-89",
+   "name": "丛生竹换土",
+   "spec": "50",
+   "unit": "丛",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 11.47,
+    "labor": 9.38,
+    "material": null,
+    "machine": null,
+    "fee": 1.14,
+    "vat": 0.95
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 46
+  },
+  {
+   "code": "E1-90",
+   "name": "丛生竹换土",
+   "spec": "60",
+   "unit": "丛",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 19.02,
+    "labor": 15.56,
+    "material": null,
+    "machine": null,
+    "fee": 1.89,
+    "vat": 1.57
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 46
+  },
+  {
+   "code": "E1-91",
+   "name": "丛生竹换土",
+   "spec": "70",
+   "unit": "丛",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 27.27,
+    "labor": 22.31,
+    "material": null,
+    "machine": null,
+    "fee": 2.71,
+    "vat": 2.25
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 47
+  },
+  {
+   "code": "E1-92",
+   "name": "丛生竹换土",
+   "spec": "",
+   "unit": "丛",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 41.68,
+    "labor": 34.09,
+    "material": null,
+    "machine": null,
+    "fee": 4.15,
+    "vat": 3.44
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 47
+  },
+  {
+   "code": "E1-93",
+   "name": "丛生竹换土",
+   "spec": "80",
+   "unit": "丛",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "2.挖土,装土,清理机下余土,场内50m内就近堆放。计量单位:见表",
+   "fees": {
+    "total": 56.08,
+    "labor": 45.87,
+    "material": null,
+    "machine": null,
+    "fee": 5.58,
+    "vat": 4.63
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "种植土",
+     "unit": "m3",
+     "price": null,
+     "qty": null
+    }
+   ],
+   "page": 47
+  },
+  {
+   "code": "E1-94",
+   "name": "整理绿化用地",
+   "spec": "",
+   "unit": "10m",
+   "work": "厚度30cm内的找平、松翻、整理。",
+   "chapter": "第一章绿化工程",
+   "section": "一、绿地整理",
+   "group": "3.整理绿化用地",
+   "fees": {
+    "total": 51.6,
+    "labor": 42.21,
+    "material": null,
+    "machine": null,
+    "fee": 5.13,
+    "vat": 4.26
+   },
+   "cons": [],
+   "page": 48
+  },
+  {
+   "code": "E1-95",
+   "name": "起挖乔木(带土球)",
+   "spec": "20",
+   "unit": "株",
+   "work": "起挖、包扎土球、出塘、搬运集中(或上车) 、回土填塘、场地清理。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 4.25,
+    "labor": 3.06,
+    "material": 0.47,
+    "machine": null,
+    "fee": 0.37,
+    "vat": 0.35
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 0.5
+    }
+   ],
+   "page": 49
+  },
+  {
+   "code": "E1-96",
+   "name": "起挖乔木(带土球)",
+   "spec": "30",
+   "unit": "株",
+   "work": "起挖、包扎土球、出塘、搬运集中(或上车) 、回土填塘、场地清理。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 8.37,
+    "labor": 6.01,
+    "material": 0.94,
+    "machine": null,
+    "fee": 0.73,
+    "vat": 0.69
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 1
+    }
+   ],
+   "page": 49
+  },
+  {
+   "code": "E1-97",
+   "name": "起挖乔木(带土球)",
+   "spec": "40",
+   "unit": "株",
+   "work": "起挖、包扎土球、出塘、搬运集中(或上车) 、回土填塘、场地清理。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 15.81,
+    "labor": 11.67,
+    "material": 1.41,
+    "machine": null,
+    "fee": 1.42,
+    "vat": 1.31
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 1.5
+    }
+   ],
+   "page": 49
+  },
+  {
+   "code": "E1-98",
+   "name": "起挖乔木(带土球)",
+   "spec": "50",
+   "unit": "株",
+   "work": "起挖、包扎土球、出塘、搬运集中(或上车) 、回土填塘、场地清理。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 25.15,
+    "labor": 18.89,
+    "material": 1.88,
+    "machine": null,
+    "fee": 2.3,
+    "vat": 2.08
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 2
+    }
+   ],
+   "page": 49
+  },
+  {
+   "code": "E1-99",
+   "name": "起挖乔木(带土球)",
+   "spec": "60",
+   "unit": "株",
+   "work": "起挖、包扎土球、出塘、搬运集中(或上车) 、回土填塘、场地清理。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 39.16,
+    "labor": 29.52,
+    "material": 2.82,
+    "machine": null,
+    "fee": 3.59,
+    "vat": 3.23
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 3
+    }
+   ],
+   "page": 49
+  },
+  {
+   "code": "E1-100",
+   "name": "起挖乔木(带土球)",
+   "spec": "70",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 73.92,
+    "labor": 41.31,
+    "material": 7.56,
+    "machine": 12.42,
+    "fee": 6.53,
+    "vat": 6.1
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 4
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 0.54
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机8t",
+     "unit": "台班",
+     "price": 653.59,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机16t",
+     "unit": "台班",
+     "price": 824.92,
+     "qty": null
+    }
+   ],
+   "page": 50
+  },
+  {
+   "code": "E1-101",
+   "name": "起挖乔木(带土球)",
+   "spec": "80",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 142.45,
+    "labor": 89.03,
+    "material": 11.04,
+    "machine": 17.65,
+    "fee": 12.97,
+    "vat": 11.76
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 6
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 0.768
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机8t",
+     "unit": "台班",
+     "price": 653.59,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机16t",
+     "unit": "台班",
+     "price": 824.92,
+     "qty": null
+    }
+   ],
+   "page": 50
+  },
+  {
+   "code": "E1-102",
+   "name": "起挖乔木(带土球)",
+   "spec": "100",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 226.4,
+    "labor": 142.7,
+    "material": 17.6,
+    "machine": 26.8,
+    "fee": 20.61,
+    "vat": 18.69
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 10
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 1.166
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机8t",
+     "unit": "台班",
+     "price": 653.59,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机16t",
+     "unit": "台班",
+     "price": 824.92,
+     "qty": null
+    }
+   ],
+   "page": 50
+  },
+  {
+   "code": "E1-103",
+   "name": "起挖乔木(带土球)",
+   "spec": "120",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 339.26,
+    "labor": 217.52,
+    "material": 25.5,
+    "machine": 37.25,
+    "fee": 30.98,
+    "vat": 28.01
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 15
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 1.621
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机8t",
+     "unit": "台班",
+     "price": 653.59,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机16t",
+     "unit": "台班",
+     "price": 824.92,
+     "qty": null
+    }
+   ],
+   "page": 50
+  },
+  {
+   "code": "E1-104",
+   "name": "起挖乔木(带土球)",
+   "spec": "140",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 466.87,
+    "labor": 289.56,
+    "material": 36.94,
+    "machine": 59.39,
+    "fee": 42.43,
+    "vat": 38.55
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 20
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机8t",
+     "unit": "台班",
+     "price": 653.59,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机16t",
+     "unit": "台班",
+     "price": 824.92,
+     "qty": 0.072
+    }
+   ],
+   "page": 50
+  },
+  {
+   "code": "E1-105",
+   "name": "起挖乔木(带土球)",
+   "spec": "160",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 682.95,
+    "labor": 407.54,
+    "material": 79.71,
+    "machine": 80.02,
+    "fee": 59.29,
+    "vat": 56.39
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 34
+    },
+    {
+     "cat": "材料",
+     "name": "麻绳",
+     "unit": "kg",
+     "price": 8.89,
+     "qty": 2.5
+    },
+    {
+     "cat": "材料",
+     "name": "其他材料费",
+     "unit": "%",
+     "price": null,
+     "qty": 2
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 3.477
+    },
+    {
+     "cat": "材料",
+     "name": "机汽车式起重机16t",
+     "unit": "台班",
+     "price": 824.92,
+     "qty": 0.097
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机25t",
+     "unit": "台班",
+     "price": 937.63,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机40t",
+     "unit": "台班",
+     "price": 1343.3,
+     "qty": null
+    }
+   ],
+   "page": 51
+  },
+  {
+   "code": "E1-106",
+   "name": "起挖乔木(带土球)",
+   "spec": "180",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 849.23,
+    "labor": 489.29,
+    "material": 105.17,
+    "machine": 111.58,
+    "fee": 73.07,
+    "vat": 70.12
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 42
+    },
+    {
+     "cat": "材料",
+     "name": "麻绳",
+     "unit": "kg",
+     "price": 8.89,
+     "qty": 3.4
+    },
+    {
+     "cat": "材料",
+     "name": "其他材料费",
+     "unit": "%",
+     "price": null,
+     "qty": 2
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 4.847
+    },
+    {
+     "cat": "材料",
+     "name": "机汽车式起重机16t",
+     "unit": "台班",
+     "price": 824.92,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机25t",
+     "unit": "台班",
+     "price": 937.63,
+     "qty": 0.119
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机40t",
+     "unit": "台班",
+     "price": 1343.3,
+     "qty": null
+    }
+   ],
+   "page": 51
+  },
+  {
+   "code": "E1-107",
+   "name": "起挖乔木(带土球)",
+   "spec": "200",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 1102.13,
+    "labor": 622.17,
+    "material": 137.68,
+    "machine": 156.58,
+    "fee": 94.7,
+    "vat": 91
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 54
+    },
+    {
+     "cat": "材料",
+     "name": "麻绳",
+     "unit": "kg",
+     "price": 8.89,
+     "qty": 4.2
+    },
+    {
+     "cat": "材料",
+     "name": "其他材料费",
+     "unit": "%",
+     "price": null,
+     "qty": 2
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 6.802
+    },
+    {
+     "cat": "材料",
+     "name": "机汽车式起重机16t",
+     "unit": "台班",
+     "price": 824.92,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机25t",
+     "unit": "台班",
+     "price": 937.63,
+     "qty": 0.167
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机40t",
+     "unit": "台班",
+     "price": 1343.3,
+     "qty": null
+    }
+   ],
+   "page": 51
+  },
+  {
+   "code": "E1-108",
+   "name": "起挖乔木(带土球)",
+   "spec": "240",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 1666.5,
+    "labor": 926.06,
+    "material": 194.93,
+    "machine": 263.29,
+    "fee": 144.62,
+    "vat": 137.6
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 74
+    },
+    {
+     "cat": "材料",
+     "name": "麻绳",
+     "unit": "kg",
+     "price": 8.89,
+     "qty": 6.3
+    },
+    {
+     "cat": "材料",
+     "name": "其他材料费",
+     "unit": "%",
+     "price": null,
+     "qty": 2
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 9.51
+    },
+    {
+     "cat": "材料",
+     "name": "机汽车式起重机16t",
+     "unit": "台班",
+     "price": 824.92,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机25t",
+     "unit": "台班",
+     "price": 937.63,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机40t",
+     "unit": "台班",
+     "price": 1343.3,
+     "qty": 0.196
+    }
+   ],
+   "page": 51
+  },
+  {
+   "code": "E1-109",
+   "name": "起挖乔木(带土球)",
+   "spec": "280",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 2297.77,
+    "labor": 1274.84,
+    "material": 266.88,
+    "machine": 366.72,
+    "fee": 199.61,
+    "vat": 189.72
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 98
+    },
+    {
+     "cat": "材料",
+     "name": "麻绳",
+     "unit": "kg",
+     "price": 8.89,
+     "qty": 8.8
+    },
+    {
+     "cat": "材料",
+     "name": "其他材料费",
+     "unit": "%",
+     "price": null,
+     "qty": 2
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 13.246
+    },
+    {
+     "cat": "材料",
+     "name": "机汽车式起重机16t",
+     "unit": "台班",
+     "price": 824.92,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机25t",
+     "unit": "台班",
+     "price": 937.63,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机40t",
+     "unit": "台班",
+     "price": 1343.3,
+     "qty": 0.273
+    }
+   ],
+   "page": 51
+  },
+  {
+   "code": "E1-110",
+   "name": "起挖乔木(裸根)",
+   "spec": "4",
+   "unit": "株",
+   "work": "起挖、出塘、修剪、打浆、搬运集中(或上车) ,回土填塘、场地清理。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 4.73,
+    "labor": 3.87,
+    "material": null,
+    "fee": 0.47,
+    "vat": 0.39
+   },
+   "cons": [],
+   "page": 52
+  },
+  {
+   "code": "E1-111",
+   "name": "起挖乔木(裸根)",
+   "spec": "6",
+   "unit": "株",
+   "work": "起挖、出塘、修剪、打浆、搬运集中(或上车) ,回土填塘、场地清理。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 13.13,
+    "labor": 10.74,
+    "material": null,
+    "fee": 1.31,
+    "vat": 1.08
+   },
+   "cons": [],
+   "page": 52
+  },
+  {
+   "code": "E1-112",
+   "name": "起挖乔木(裸根)",
+   "spec": "8",
+   "unit": "株",
+   "work": "起挖、出塘、修剪、打浆、搬运集中(或上车) ,回土填塘、场地清理。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 31.36,
+    "labor": 25.65,
+    "material": null,
+    "fee": 3.12,
+    "vat": 2.59
+   },
+   "cons": [],
+   "page": 52
+  },
+  {
+   "code": "E1-113",
+   "name": "起挖乔木(裸根)",
+   "spec": "10",
+   "unit": "株",
+   "work": "起挖、出塘、修剪、打浆、搬运集中(或上车) ,回土填塘、场地清理。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 54.25,
+    "labor": 44.37,
+    "material": null,
+    "fee": 5.4,
+    "vat": 4.48
+   },
+   "cons": [],
+   "page": 52
+  },
+  {
+   "code": "E1-114",
+   "name": "起挖乔木(裸根)",
+   "spec": "12",
+   "unit": "株",
+   "work": "起挖、出塘、修剪、打浆、搬运集中(或上车) ,回土填塘、场地清理。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 85.6,
+    "labor": 70.02,
+    "material": null,
+    "fee": 8.51,
+    "vat": 7.07
+   },
+   "cons": [],
+   "page": 52
+  },
+  {
+   "code": "E1-115",
+   "name": "起挖乔木(裸根)",
+   "spec": "14",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 111.94,
+    "labor": 91.57,
+    "machine": null,
+    "fee": 11.13,
+    "vat": 9.24
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": null
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": null
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机8t",
+     "unit": "台班",
+     "price": 653.59,
+     "qty": null
+    }
+   ],
+   "page": 53
+  },
+  {
+   "code": "E1-116",
+   "name": "起挖乔木(裸根)",
+   "spec": "16",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 149.08,
+    "labor": 104.46,
+    "material": 5.68,
+    "machine": 12.42,
+    "fee": 14.21,
+    "vat": 12.31
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 2
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 0.54
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机8t",
+     "unit": "台班",
+     "price": 653.59,
+     "qty": 0.019
+    }
+   ],
+   "page": 53
+  },
+  {
+   "code": "E1-117",
+   "name": "起挖乔木(裸根)",
+   "spec": "18",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 214.64,
+    "labor": 149.75,
+    "material": 9.16,
+    "machine": 17.65,
+    "fee": 20.36,
+    "vat": 17.72
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 4
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 0.768
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机8t",
+     "unit": "台班",
+     "price": 653.59,
+     "qty": 0.027
+    }
+   ],
+   "page": 53
+  },
+  {
+   "code": "E1-118",
+   "name": "起挖乔木(裸根)",
+   "spec": "20",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 299.38,
+    "labor": 205.74,
+    "material": 13.84,
+    "machine": 26.8,
+    "fee": 28.28,
+    "vat": 24.72
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 6
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 1.166
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机8t",
+     "unit": "台班",
+     "price": 653.59,
+     "qty": 0.041
+    }
+   ],
+   "page": 53
+  },
+  {
+   "code": "E1-119",
+   "name": "起挖乔木(裸根)",
+   "spec": "24",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 468.97,
+    "labor": 327.81,
+    "material": 20.8,
+    "machine": 37.25,
+    "fee": 44.39,
+    "vat": 38.72
+   },
+   "cons": [
+    {
+     "cat": "材料",
+     "name": "草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 10
+    },
+    {
+     "cat": "材料",
+     "name": "柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 1.621
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机8t",
+     "unit": "台班",
+     "price": 653.59,
+     "qty": 0.057
+    }
+   ],
+   "page": 53
+  },
+  {
+   "code": "E1-120",
+   "name": "起挖乔木(裸根)",
+   "spec": "30",
+   "unit": "株",
+   "work": "同前。",
+   "chapter": "第一章绿化工程",
+   "section": "二、栽植花木",
+   "group": "1.花木起挖",
+   "fees": {
+    "total": 614.91,
+    "labor": 420.42,
+    "material": 33.39,
+    "machine": 52.79,
+    "fee": 57.54,
+    "vat": 50.77
+   },
+   "cons": [
+    {
+     "cat": "机械",
+     "name": "材草绳",
+     "unit": "kg",
+     "price": 0.94,
+     "qty": 18
+    },
+    {
+     "cat": "机械",
+     "name": "其他材料费",
+     "unit": "%",
+     "price": null,
+     "qty": 2
+    },
+    {
+     "cat": "机械",
+     "name": "料柴油【机械】",
+     "unit": "kg",
+     "price": 7.03,
+     "qty": 2.294
+    },
+    {
+     "cat": "机械",
+     "name": "汽车式起重机16t",
+     "unit": "台班",
+     "price": 824.92,
+     "qty": 0.064
+    }
+   ],
+   "page": 54
+  }
+ ],
+ "demo": true,
+ "demoNote": "演示样本：前120条。来源：湖北省住建厅官方公开发布件（2024），仅作品辑演示与个人学习。"
+}

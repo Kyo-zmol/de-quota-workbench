@@ -3,8 +3,8 @@ const http = require('http');
 const fs = require('fs');
 const path = require('path');
 const ROOT = path.resolve(__dirname, '..');
-const PROC = path.join(ROOT, 'data', 'processed');
-const PROJ = path.join(ROOT, 'data', 'projects');
+const PROC = process.env.WB_PROC || path.join(ROOT, 'data', 'processed');
+const PROJ = process.env.WB_PROJ || path.join(ROOT, 'data', 'projects');
 const NOTES = 'F:\\我\\定额知识库工作台\\notes';
 const PUB = path.join(__dirname, 'public');
 const PORT = process.env.PORT || 8730;
@@ -203,7 +203,7 @@ function noteCandidates(text) {
   }
   return cands.slice(0, 20);
 }
-const JSZip = require(path.join('C:\\Users\\Yzd18\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\node\\node_modules', 'jszip'));
+let JSZip; try { JSZip = require('jszip'); } catch { JSZip = require(path.join(process.env.NM_DIR || path.join(__dirname, 'node_modules'), 'jszip')); }
 const colIdxOf = ref => { let n = 0; for (const ch of ref.replace(/\d+/g, '')) n = n * 26 + (ch.charCodeAt(0) - 64); return n - 1; };
 const xesc = s => String(s).replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&apos;/g, "'").replace(/&#(\d+);/g, (_, d) => String.fromCharCode(+d)).replace(/&amp;/g, '&');
 async function parseXlsx(buf) {

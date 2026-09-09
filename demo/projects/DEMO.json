@@ -1,0 +1,37 @@
+{
+ "id": "DEMO",
+ "name": "示例工作单：某门卫室",
+ "tax": "general",
+ "spec": 0,
+ "rows": [
+  {
+   "boq": "010302001001",
+   "name": "砖基础",
+   "feature": "实心砖 直形 干混砂浆DM M10",
+   "unit": "m3",
+   "qty": 12.5,
+   "code": "A1-1",
+   "adj": {
+    "laborK": 1,
+    "matK": 1,
+    "macK": 1,
+    "subs": []
+   }
+  },
+  {
+   "boq": "010402001001",
+   "name": "矩形柱",
+   "feature": "C20 预拌混凝土 柱高3.6m内",
+   "unit": "m3",
+   "qty": 3.2,
+   "code": "A2-11",
+   "adj": {
+    "laborK": 1,
+    "matK": 1,
+    "macK": 1,
+    "subs": []
+   }
+  }
+ ],
+ "savedAt": "2026-09-09T14:23:33.125Z"
+}
