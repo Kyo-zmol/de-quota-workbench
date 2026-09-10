@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>定额知识库工作台 · 静态演示（BYO-data）</title>
 <link rel="stylesheet" href="style.css">
 <meta property="og:title" content="定额知识库工作台 · De Quota Workbench">
@@ -23,6 +23,7 @@
     <button class="nav" data-mod="notes" data-tip="我的笔记 · Obsidian 外独立存放" aria-label="我的笔记"><svg viewBox="0 0 24 24"><path d="M6.5 3.5h8L18.5 7.5v13h-12z"/><path d="M9.5 12h5.5M9.5 15.5h5.5"/><path d="M14.5 3.5V7.5h4"/></svg>笔记</button>
     <div class="sp"></div>
     <button class="nav" data-mod="settings" data-tip="设置 · 数据与关于" aria-label="设置"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2.8"/><path d="M12 3.5v2.3M12 18.2v2.3M3.5 12h2.3M18.2 12h2.3M6 6l1.6 1.6M16.4 16.4L18 18M18 6l-1.6 1.6M7.6 16.4L6 18"/></svg>设置</button>
+    <button class="nav" id="viewBtn" data-tip="切换 手机/电脑 视图" aria-label="视图切换"><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg><span id="viewLbl">手机</span></button>
     <div class="ver">HB-2024</div>
   </nav>
   <div id="main">
@@ -30,6 +31,7 @@
       <h1>定额知识库工作台</h1>
       <span class="crumb" id="crumb">查定额</span>
       <div class="grow"></div>
+      <button class="btn sm plain" id="themeBtn" title="夜审模式切换" aria-label="主题切换">夜</button>
       <div class="searchbox"><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg><input id="q" placeholder="搜编号 / 名称 / 章节 / 材料名" autocomplete="off"><kbd>/</kbd></div>
       <select class="sel" id="bookSel"></select>
       <span style="color:var(--sub);font-size:12px" id="statTxt"></span>
@@ -81,6 +83,7 @@
           <div class="fld"><label>人工系数</label><div class="kRow"><input type="range" id="cvLr" min="0.5" max="2" step="0.01" value="1" style="width:100%"><input id="cvL" value="1"></div></div>
           <div class="fld"><label>材料系数</label><div class="kRow"><input type="range" id="cvMr" min="0.5" max="2" step="0.01" value="1" style="width:100%"><input id="cvM" value="1"></div></div>
           <div class="fld"><label>机械系数</label><div class="kRow"><input type="range" id="cvCr" min="0.5" max="2" step="0.01" value="1" style="width:100%"><input id="cvC" value="1"></div></div>
+          <div class="fld"><label>换算预设（砂浆/混凝土调差等）</label><select id="cvPreset" style="height:32px;border:1px solid var(--line);border-radius:4px;padding:0 8px;font-size:12.5px"><option value="">选择预设…</option></select></div>
           <div style="color:var(--sub);font-size:12px;line-height:1.8">换算逻辑：人材机按系数调整 → 费用按原隐含费率（费用÷(人工+机械)）重计 → 增值税按原税率重计。材料换价差额＝(新价−原价)×消耗量。</div>
         </div>
         <div id="cvOut"><div class="empty">先选择一条定额</div></div>
