@@ -81,6 +81,7 @@
           <div class="fld"><label>人工系数</label><div class="kRow"><input type="range" id="cvLr" min="0.5" max="2" step="0.01" value="1" style="width:100%"><input id="cvL" value="1"></div></div>
           <div class="fld"><label>材料系数</label><div class="kRow"><input type="range" id="cvMr" min="0.5" max="2" step="0.01" value="1" style="width:100%"><input id="cvM" value="1"></div></div>
           <div class="fld"><label>机械系数</label><div class="kRow"><input type="range" id="cvCr" min="0.5" max="2" step="0.01" value="1" style="width:100%"><input id="cvC" value="1"></div></div>
+          <div class="fld"><label>换算预设（砂浆/混凝土调差等）</label><select id="cvPreset" style="height:32px;border:1px solid var(--line);border-radius:4px;padding:0 8px;font-size:12.5px"><option value="">选择预设…</option></select></div>
           <div style="color:var(--sub);font-size:12px;line-height:1.8">换算逻辑：人材机按系数调整 → 费用按原隐含费率（费用÷(人工+机械)）重计 → 增值税按原税率重计。材料换价差额＝(新价−原价)×消耗量。</div>
         </div>
         <div id="cvOut"><div class="empty">先选择一条定额</div></div>
