@@ -244,3 +244,32 @@ input[type=range]{accent-color:var(--seal);height:4px}
   .tabs{flex-wrap:wrap;gap:0}
   .dhead .code{font-size:14px;padding:4px 8px}
 }
+/* ═══ v3.2 夜审模式（加班对审：低眩光暖墨底，朱砂提亮保对比） ═══ */
+:root[data-theme="night"]{
+  --paper:#161310; --panel:#1E1A15; --panel2:#211D17;
+  --line:#37312A; --line-soft:#2A251F;
+  --ink:#EDE6D8; --sub:#A89E8B; --faint:#7A7160;
+  --seal:#E0685C; --seal-ink:#F0897C; --seal-soft:#3A221E;
+  --ok:#4FB3A5; --warn:#D99A4E; --danger:#E0685C;
+  --rail:#0E0C0A; --rail-ink:#8F8676; --rail-on:#F0E9DB;
+  --sh1:0 1px 2px rgba(0,0,0,.4); --sh2:0 6px 18px rgba(0,0,0,.5);
+}
+:root[data-theme="night"] #main{background-image:linear-gradient(rgba(237,230,216,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(237,230,216,.03) 1px,transparent 1px)}
+:root[data-theme="night"] th{background:#26211B;color:#B4AA96;box-shadow:0 1px 0 var(--line)}
+:root[data-theme="night"] tbody tr:hover{background:#241F19}
+:root[data-theme="night"] .row.on{background:var(--seal-soft)}
+:root[data-theme="night"] .fee.main{background:linear-gradient(160deg,#2A1B17 0%,var(--panel) 70%)}
+:root[data-theme="night"] .btn{background:#EDE6D8;color:#161310}
+:root[data-theme="night"] .btn:hover{background:#fff}
+:root[data-theme="night"] .btn.ghost{background:transparent;color:var(--seal-ink);border-color:var(--seal)}
+:root[data-theme="night"] .btn.ghost:hover{background:var(--seal-soft)}
+:root[data-theme="night"] .btn.plain{background:var(--panel);color:var(--ink);border-color:var(--line)}
+:root[data-theme="night"] .searchbox input,:root[data-theme="night"] select.sel,:root[data-theme="night"] .fld input,:root[data-theme="night"] textarea.note{background:var(--panel2);color:var(--ink)}
+:root[data-theme="night"] mark{background:#4A2A24;color:#F5B4AA}
+:root[data-theme="night"] .searchbox kbd{background:var(--line-soft);color:var(--sub)}
+:root[data-theme="night"] #toast{background:#EDE6D8;color:#161310}
+:root[data-theme="night"] .hint .chip{background:var(--panel);border-color:var(--line)}
+:root[data-theme="night"] .delta{background:#3A2E1C;color:var(--warn)}
+:root[data-theme="night"] .cat-人工{background:#6FA3D8}:root[data-theme="night"] .cat-材料{background:var(--ok)}:root[data-theme="night"] .cat-机械{background:var(--warn)}
+:root[data-theme="night] .estTable td select,:root[data-theme="night] .estTable td input{background:var(--panel2);color:var(--ink);border-color:transparent}
+:root[data-theme="night] .estTable td input:focus{border-color:var(--seal)}

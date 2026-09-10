@@ -171,6 +171,7 @@ async function renderEstimate() {
      <div class="sumRow total"><span>单位工程造价</span><span class="v">${fmt(grand)}</span></div></div>`;
   bindEst();
 }
+function applyTheme(t) { document.documentElement.dataset.theme = t; localStorage.setItem('wb_theme', t); const b = $('#themeBtn'); if (b) b.textContent = t === 'night' ? '昼' : '夜'; }
 function mobInit() {
   if (!document.getElementById('mobBack')) { const b = document.createElement('button'); b.id = 'mobBack'; b.className = 'btn sm plain'; b.textContent = '← 返回'; b.onclick = () => $('#detailPane').classList.remove('mobopen'); document.body.appendChild(b); }
   const tb = document.querySelector('#topbar .searchbox'); if (tb && !document.getElementById('mobTree')) { const t = document.createElement('button'); t.id = 'mobTree'; t.className = 'btn sm plain'; t.textContent = '章'; t.style.cssText = 'position:fixed;right:10px;top:58px;z-index:41'; t.onclick = () => $('#treePane').classList.toggle('mobshow'); document.body.appendChild(t); }
@@ -509,4 +510,6 @@ async function runSettings() { const st = await api('/api/stats'); $('#setBody')
   if (!localStorage.getItem('wb_guide')) $('#guideMask').classList.add('on');
   go('estimate');
   mobInit();
+  applyTheme(localStorage.getItem('wb_theme') || 'day');
+  $('#themeBtn').onclick = () => applyTheme(document.documentElement.dataset.theme === 'night' ? 'day' : 'night');
 })();
