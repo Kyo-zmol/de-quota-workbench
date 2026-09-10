@@ -1,5 +1,9 @@
 # 定额知识库工作台 · De Quota Workbench
 
+[![live](https://img.shields.io/badge/demo-kyo--zmol.github.io-B3271E)](https://kyo-zmol.github.io/de-quota-workbench/) [![repo](https://img.shields.io/badge/github-Kyo--zmol%2Fde--quota--workbench-191613)](https://github.com/Kyo-zmol/de-quota-workbench)
+
+> 在线演示（静态·BYO-data）：https://kyo-zmol.github.io/de-quota-workbench/ 　|　仓库：https://github.com/Kyo-zmol/de-quota-workbench
+
 > 一名造价员的 AI 工作台：把湖北省 2024 定额（27,334 子目 / 17,577 条说明规则）变成可搜索、可组价、可换算、可沉淀经验的本地优先专业工具。
 > A local-first AI workbench that turns Hubei-2024 construction quotas (27,334 items / 17,577 rule clauses) into a searchable, estimatable, convertible, experience-accumulating professional tool.
 
