@@ -71,3 +71,10 @@ MIT（代码）。数据声明见 [LICENSE](LICENSE) DATA NOTICE。
 
 ## English Abstract
 A local-first, offline-capable workbench for construction cost engineering (Hubei 2024 quotas): 27,334 quota items and 17,577 clause rules parsed from official government PDFs by a zero-dependency pipeline; features include BOQ importing (hand-written OOXML parser), three-level fee aggregation audited against the provincial fee quota (single-layer VAT, surcharges modeled per tax locality), conversion calculator with official rate forward-computation, material price-book linkage, evidence-based RAG Q&A with optional BYO-key LLM generation, and habit-rule cards that codify estimator judgment. The design system "Xuanzhi-Zhusha" (rice-paper & cinnabar seal) grounds the UI in the domain ledger heritage. Code and data are strictly separated for compliance; the static GitHub Pages build ships a labeled demo subset with BYO-data import.
+
+## 变更史
+- v1.0.0 首发：六模块+静态BYO-data+合规分离
+- v1.1.0 夜审模式
+- v4.0 舞台+容器查询跨设备互看（零FOUC）
+- v4.1 子目级QA徽章+自动愈合+人工核录队列；顶栏/工具条治理
+- v4.2 自检矩阵 ALL PASS 修复轮（切换钮/底轨固定/更多菜单/ favicon）
