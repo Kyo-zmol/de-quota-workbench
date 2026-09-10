@@ -34,7 +34,7 @@ function renderList() {
   const el = $('#listPane');
   if (!S.results.length) { el.innerHTML = `<div class="hint">没有匹配结果<br><span class="chip" data-q="砖基础">砖基础</span><span class="chip" data-q="混凝土板">混凝土板</span><span class="chip" data-q="电缆">电缆</span><span class="chip" data-q="路灯">路灯</span></div>`; return; }
   el.innerHTML = S.results.map(r => `<div class="row${r.code === S.code ? ' on' : ''}" data-code="${esc(r.code)}"><div class="l1"><span class="code">${esc(r.code)}</span><span class="bk">${esc(SHORT(r.book))}</span></div><div class="nm">${hl(r.name, S.q)}${r.spec ? ' <span style="color:var(--sub)">' + hl(r.spec, S.q) + '</span>' : ''}</div><div class="l2"><span>${esc(r.unit || '')}</span><span class="pr">¥${fmt(r.total)}</span><span>${esc(r.section || '')}</span></div></div>`).join('');
-  el.querySelectorAll('.row').forEach(x => x.onclick = () => openItem(x.dataset.code));
+  el.querySelectorAll('.row').forEach(x => x.onclick = () => { openItem(x.dataset.code); if (innerWidth <= 900) $('#detailPane').classList.add('mobopen'); });
   el.querySelectorAll('.chip').forEach(x => x.onclick = () => { $('#q').value = x.dataset.q; S.q = x.dataset.q; runSearch(); });
 }
 async function loadTree() {
@@ -170,6 +170,10 @@ async function renderEstimate() {
      <div class="sumRow"><span>附加税 ${(surchRate * 100).toFixed(0)}%（城建+教育+地方教育）</span><span class="v">${fmt(surch)}</span></div>
      <div class="sumRow total"><span>单位工程造价</span><span class="v">${fmt(grand)}</span></div></div>`;
   bindEst();
+}
+function mobInit() {
+  if (!document.getElementById('mobBack')) { const b = document.createElement('button'); b.id = 'mobBack'; b.className = 'btn sm plain'; b.textContent = '← 返回'; b.onclick = () => $('#detailPane').classList.remove('mobopen'); document.body.appendChild(b); }
+  const tb = document.querySelector('#topbar .searchbox'); if (tb && !document.getElementById('mobTree')) { const t = document.createElement('button'); t.id = 'mobTree'; t.className = 'btn sm plain'; t.textContent = '章'; t.style.cssText = 'position:fixed;right:10px;top:58px;z-index:41'; t.onclick = () => $('#treePane').classList.toggle('mobshow'); document.body.appendChild(t); }
 }function bindEst() {
   $('#estBody').querySelectorAll('input,select').forEach(inp => inp.onchange = async () => { const tr = inp.closest('tr'); const i = +tr.dataset.i; S.est.rows[i][inp.dataset.f] = inp.value; if (inp.dataset.f === 'code' || inp.dataset.f === 'type') { Object.keys(matchCache).length && null; } renderEstimate(); });
   $('#estBody').querySelectorAll('[data-act]').forEach(b => b.onclick = async () => {
@@ -504,4 +508,5 @@ async function runSettings() { const st = await api('/api/stats'); $('#setBody')
   });
   if (!localStorage.getItem('wb_guide')) $('#guideMask').classList.add('on');
   go('estimate');
+  mobInit();
 })();

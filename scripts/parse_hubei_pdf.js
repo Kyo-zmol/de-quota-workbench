@@ -23,7 +23,7 @@ const UNIT_RE = /^\d+(\.\d+)?(m|m2|m3|kg|t|km|ha|d|个|套|块|樘|扇)$/i;
     const ys = Object.keys(rows).map(Number).sort((a, b) => b - a);
     const lineAt = y => rows[y].sort((a, b) => a.x - b.x);
     const cells = line => { const out = []; for (const o of line) { const last = out[out.length - 1]; if (last && o.x - (last.x + last.w) < 12) { last.items.push(o); last.w = o.x + o.w - last.x; } else out.push({ x: o.x, w: o.w, items: [o] }); } return out.map(c => ({ x: c.x, cx: c.x + c.w / 2, txt: norm(c.items.map(i => i.s).join('')) })); };
-    let block = null, zone = '', curCat = '', pendingSup = '', preWork = '', preUnit = '';
+    let block = null, zone = '', curCat = '', pendingSup = '', preWork = '', preUnit = '', pendingFeeVals = null;
     let unitX = null, priceX = null, pendingSupCol = {};
 
     const flush = () => {
@@ -79,7 +79,8 @@ const UNIT_RE = /^\d+(\.\d+)?(m|m2|m3|kg|t|km|ha|d|个|套|块|樘|扇)$/i;
         zone = 'specs'; continue;
       }
       const feeKey = (() => { if (t2.startsWith('全费用(元)')) return 'total'; if (t2.startsWith('人工费(元)')) return 'labor'; if (t2.startsWith('材料费(元)')) return 'material'; if (t2.startsWith('机械费(元)')) return 'machine'; if (t2.startsWith('费用(元)')) return 'fee'; if (t2.startsWith('增值税(元)')) return 'vat'; return null; })();
-      if (feeKey) { zone = 'fees'; const ncols = block.cols.length; const toks = []; for (const o of line) { const ns = norm(o.s).split(/\s+/).filter(isNum); if (!ns.length) { if (norm(o.s) === '-') { const ci = colIdx(o.x); if (ci >= 0) toks.push({ ci, v: null }); } continue; } if (ns.length === 1) toks.push({ ci: colIdx(o.x), v: toNum(ns[0]) }); else { let start = colIdx(o.x); if (start < 0) start = 0; ns.forEach((v, k) => { const ci = start + k; if (ci < ncols) toks.push({ ci, v: toNum(v) }); }); } } for (const t of toks) if (t.ci >= 0) block.fees[t.ci][feeKey] = t.v; continue; }
+      if (zone === 'fees' && !feeKey) { const ncols0 = block.cols.length; const pv = []; for (const o of line) { const ns = norm(o.s).split(/\s+/).filter(t2 => isNum(t2) || t2 === '-'); for (const t2 of ns) pv.push({ x: o.x, v: t2 === '-' ? null : toNum(t2) }); } if (pv.length === ncols0) { pendingFeeVals = pv; } continue; }
+      if (feeKey) { zone = 'fees'; const ncols = block.cols.length; const vals = []; for (const o of line) { const ns = norm(o.s).split(/\s+/).filter(t2 => isNum(t2) || t2 === '-'); for (const t2 of ns) vals.push({ x: o.x, v: t2 === '-' ? null : toNum(t2) }); } vals.sort((a2, b2) => a2.x - b2.x); const use = vals.length === ncols ? vals : (pendingFeeVals && vals.length === 0 ? pendingFeeVals : vals); pendingFeeVals = null; if (use.length === ncols) use.forEach((v, i) => { block.fees[i][feeKey] = v.v; }); else for (const v of use) { const ci = colIdx(v.x); if (ci >= 0) block.fees[ci][feeKey] = v.v; } continue; }
       if (t2.includes('消耗量') && t2.includes('名称')) { zone = 'cons'; const uc = cells(line).find(c => c.txt.startsWith('单') && c.txt.includes('位')); if (uc) unitX = uc.x; continue; }
       if (t2 === '单价' || t2 === '单价(元)') { priceX = line[0].x; continue; }
       if (t2 === '(元)' && zone === 'cons' && priceX == null) { priceX = line[0].x; continue; }
