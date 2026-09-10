@@ -432,3 +432,20 @@ html[data-view="m600"] #stage{overflow-x:hidden;max-width:100%}
   .estTop.menuOpen .estSec{display:flex}
   .estSec .btn,.estSec select.sel{width:100%;flex:0 0 auto}
 }
+
+@container (max-width: 900px){
+  #main{overflow-y:auto;-webkit-overflow-scrolling:touch}
+  .page.on{display:block;height:auto}
+  #pg-lookup.on{display:grid;grid-template-columns:1fr;height:100%}
+  #pg-estimate,#pg-convert,#pg-prices,#pg-rules,#pg-notes,#pg-settings{overflow:visible}
+  .estWrap{display:block}
+  .estTable{overflow:visible}
+  .sumPane{display:block;overflow:visible}
+}
+
+@container (max-width: 900px){
+  #moreBtn{display:inline-flex}
+  .estSec{display:none;position:absolute;right:8px;top:calc(100% + 4px);background:var(--panel);border:1px solid var(--line);border-radius:8px;box-shadow:var(--sh2);padding:8px;flex-direction:column;gap:8px;z-index:40;min-width:190px}
+  .estTop.menuOpen .estSec{display:flex}
+  .estSec .btn,.estSec select.sel{width:100%;flex:0 0 auto}
+}

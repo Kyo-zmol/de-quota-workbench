@@ -34,7 +34,7 @@ function renderList() {
   const el = $('#listPane');
   if (!S.results.length) { el.innerHTML = `<div class="hint">没有匹配结果<br><span class="chip" data-q="砖基础">砖基础</span><span class="chip" data-q="混凝土板">混凝土板</span><span class="chip" data-q="电缆">电缆</span><span class="chip" data-q="路灯">路灯</span></div>`; return; }
   el.innerHTML = S.results.map(r => `<div class="row${r.code === S.code ? ' on' : ''}" data-code="${esc(r.code)}"><div class="l1"><span class="code">${esc(r.code)}</span>${r.fixed ? ' <span class="pill acc" title="已核录/愈合">✓</span>' : ''}${r.qaFail ? ' <span class="pill" style="background:var(--amber-soft);color:var(--warn)" title="自检异常·引用需核对">!</span>' : ''}<span class="bk">${esc(SHORT(r.book))}</span></div><div class="nm">${hl(r.name, S.q)}${r.spec ? ' <span style="color:var(--sub)">' + hl(r.spec, S.q) + '</span>' : ''}</div><div class="l2"><span>${esc(r.unit || '')}</span><span class="pr">¥${fmt(r.total)}</span><span>${esc(r.section || '')}</span></div></div>`).join('');
-  el.querySelectorAll('.row').forEach(x => x.onclick = () => { openItem(x.dataset.code); if (innerWidth <= 900) $('#detailPane').classList.add('mobopen'); });
+  el.querySelectorAll('.row').forEach(x => x.onclick = () => { openItem(x.dataset.code); if (viewMode() !== 'desk') $('#detailPane').classList.add('mobopen'); });
   el.querySelectorAll('.chip').forEach(x => x.onclick = () => { $('#q').value = x.dataset.q; S.q = x.dataset.q; runSearch(); });
 }
 async function loadTree() {
@@ -515,8 +515,8 @@ async function runSettings() { const st = await api('/api/stats'); $('#setBody')
   mobInit();
   applyView();
   addEventListener('resize', () => applyView());
-  $(document).addEventListener('click', e => { const mb = e.target.closest('#moreBtn'); if (mb) { e.stopPropagation(); document.querySelector('.estTop').classList.toggle('menuOpen'); return; } if (!e.target.closest('.estSec') && !e.target.closest('#moreBtn')) document.querySelector('.estTop').classList.remove('menuOpen'); });
-$(document).addEventListener('click', e => { const t = e.target.closest('.viewToggle'); if (!t) return; const o = localStorage.getItem('wb_view'); if (!o) localStorage.setItem('wb_view', viewMode() === 'desk' ? 'mobile' : 'desktop'); else localStorage.removeItem('wb_view'); applyView(); const mm = viewMode(); const ff = localStorage.getItem('wb_view'); toast(ff ? (mm === 'desk' ? '电脑版视图：可横向平移查看全幅' : '手机版视图（舞台预览）') : '已回到自适应视图'); });
+  document.addEventListener('click', e => { const mb = e.target.closest('#moreBtn'); if (mb) { e.stopPropagation(); document.querySelector('.estTop').classList.toggle('menuOpen'); return; } if (!e.target.closest('.estSec') && !e.target.closest('#moreBtn')) document.querySelector('.estTop').classList.remove('menuOpen'); });
+document.addEventListener('click', e => { const t = e.target.closest('.viewToggle'); if (!t) return; const o = localStorage.getItem('wb_view'); if (!o) localStorage.setItem('wb_view', viewMode() === 'desk' ? 'mobile' : 'desktop'); else localStorage.removeItem('wb_view'); applyView(); const mm = viewMode(); const ff = localStorage.getItem('wb_view'); toast(ff ? (mm === 'desk' ? '电脑版视图：可横向平移查看全幅' : '手机版视图（舞台预览）') : '已回到自适应视图'); });
   applyTheme(localStorage.getItem('wb_theme') || 'day');
   $('#themeBtn').onclick = () => applyTheme(document.documentElement.dataset.theme === 'night' ? 'day' : 'night');
 })();

@@ -282,6 +282,7 @@ const server = http.createServer((req, res) => {
   const u = new URL(req.url, 'http://x');
   const p = u.pathname;
   try {
+    if (p === '/favicon.ico') { res.writeHead(200, { 'Content-Type': 'image/svg+xml', 'Cache-Control': 'public, max-age=86400' }); res.end('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#B3271E"/><text x="16" y="22" font-size="18" text-anchor="middle" fill="#FFF6EE" font-family="serif">定</text></svg>'); return; }
     if (p === '/') return send(res, 200, fs.readFileSync(path.join(PUB, 'index.html')), 'text/html; charset=utf-8');
     if (p.startsWith('/data/')) { const f = path.join(ROOT, 'data', p.replace('/data/', '')); if (f.startsWith(path.join(ROOT, 'data')) && fs.existsSync(f)) return send(res, 200, fs.readFileSync(f), 'application/pdf'); }
     if (p.startsWith('/tools/')) { const f = path.join(PUB, 'tools', p.replace('/tools/', '')); if (f.startsWith(path.join(PUB, 'tools')) && fs.existsSync(f)) return send(res, 200, fs.readFileSync(f), MIME[path.extname(f)] || 'application/octet-stream'); }
