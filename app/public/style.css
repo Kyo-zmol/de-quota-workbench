@@ -189,6 +189,146 @@ input[type=range]{accent-color:var(--seal);height:4px}
 @media (prefers-reduced-motion: reduce){*{transition:none !important;animation:none !important}}
 
 /* ═══ v3.1 移动端适配（≤900px：轨变底栏、三栏变堆叠、汇总下移） ═══ */
+#mobBack{display:none;position:absolute;left:10px;top:58px;z-index:35}
+/* ═══ v3.2 夜审模式（加班对审：低眩光暖墨底，朱砂提亮保对比） ═══ */
+:root[data-theme="night"]{
+  --paper:#161310; --panel:#1E1A15; --panel2:#211D17;
+  --line:#37312A; --line-soft:#2A251F;
+  --ink:#EDE6D8; --sub:#A89E8B; --faint:#7A7160;
+  --seal:#E0685C; --seal-ink:#F0897C; --seal-soft:#3A221E;
+  --ok:#4FB3A5; --warn:#D99A4E; --danger:#E0685C;
+  --rail:#0E0C0A; --rail-ink:#8F8676; --rail-on:#F0E9DB;
+  --sh1:0 1px 2px rgba(0,0,0,.4); --sh2:0 6px 18px rgba(0,0,0,.5);
+}
+:root[data-theme="night"] #main{background-image:linear-gradient(rgba(237,230,216,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(237,230,216,.03) 1px,transparent 1px)}
+:root[data-theme="night"] th{background:#26211B;color:#B4AA96;box-shadow:0 1px 0 var(--line)}
+:root[data-theme="night"] tbody tr:hover{background:#241F19}
+:root[data-theme="night"] .row.on{background:var(--seal-soft)}
+:root[data-theme="night"] .fee.main{background:linear-gradient(160deg,#2A1B17 0%,var(--panel) 70%)}
+:root[data-theme="night"] .btn{background:#EDE6D8;color:#161310}
+:root[data-theme="night"] .btn:hover{background:#fff}
+:root[data-theme="night"] .btn.ghost{background:transparent;color:var(--seal-ink);border-color:var(--seal)}
+:root[data-theme="night"] .btn.ghost:hover{background:var(--seal-soft)}
+:root[data-theme="night"] .btn.plain{background:var(--panel);color:var(--ink);border-color:var(--line)}
+:root[data-theme="night"] .searchbox input,:root[data-theme="night"] select.sel,:root[data-theme="night"] .fld input,:root[data-theme="night"] textarea.note{background:var(--panel2);color:var(--ink)}
+:root[data-theme="night"] mark{background:#4A2A24;color:#F5B4AA}
+:root[data-theme="night"] .searchbox kbd{background:var(--line-soft);color:var(--sub)}
+:root[data-theme="night"] #toast{background:#EDE6D8;color:#161310}
+:root[data-theme="night"] .hint .chip{background:var(--panel);border-color:var(--line)}
+:root[data-theme="night"] .delta{background:#3A2E1C;color:var(--warn)}
+:root[data-theme="night"] .cat-人工{background:#6FA3D8}:root[data-theme="night"] .cat-材料{background:var(--ok)}:root[data-theme="night"] .cat-机械{background:var(--warn)}
+:root[data-theme="night"] .estTable td select,:root[data-theme="night"] .estTable td input{background:var(--panel2);color:var(--ink);border-color:transparent}
+:root[data-theme="night"] .estTable td input:focus{border-color:var(--seal)}
+
+/* ═══ v3.3 安卓/compact 重修（M3 adaptive：compact<600dp 单pane、44dp 触控、禁字体膨大） ═══ */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  
+  /* 工具条：单行横滑，不堆叠吃屏 */
+  /* 触控目标 ≥44 */
+  /* 输入 16px 防聚焦缩放 */
+  /* 底轨固定+安全区 */
+  /* 窄横屏 */
+  @media (max-height: 480px){
+  }
+
+/* ═══ v4 舞台+容器查询（跨设备互看正解：布局跟随 stage 宽度而非视口） ═══ */
+#stageWrap{height:100%;overflow:auto;background:var(--paper)}
+#stage{container-type:inline-size;width:var(--stage-w,100%);height:100%;margin:0 auto;position:relative}
+html[data-forced="1"] #stage{box-shadow:0 0 0 1px var(--line),0 14px 44px rgba(20,10,5,.20);border-radius:12px;margin:14px auto;height:calc(100% - 28px);overflow:hidden}
+html[data-forced="1"] #stageWrap{background:#0E0C0A}
+html[data-view="m600"]{--tb:46px}
+html[data-view="m600"] #stage{overflow-x:hidden;max-width:100%}
+@container (max-width: 900px){
+  #app{grid-template-columns:1fr;grid-template-rows:1fr 60px}
+  #rail{order:2;flex-direction:row;justify-content:space-around;padding:6px 4px;gap:2px;background:linear-gradient(0deg,#171310,#151210)}
+  #rail:after{display:none}
+  #rail .brand{display:none}
+  #rail .sp{display:none}
+  #rail .ver{display:none}
+  #rail button.nav{width:52px;height:48px;font-size:10px}
+  #rail button.nav.on:before{left:10px;right:10px;top:auto;bottom:-6px;width:auto;height:3px;border-radius:2px}
+  #rail button.nav[data-tip]:hover:after{display:none}
+  #main{order:1}
+  #topbar{padding:0 12px;gap:8px;height:50px;flex:0 0 50px}
+  #topbar h1{font-size:15px;letter-spacing:1px}
+  #topbar .crumb{display:none}
+  #statTxt{display:none}
+  .searchbox{width:auto;flex:1}
+  #pg-lookup{grid-template-columns:1fr !important}
+  #treePane{display:none}
+  #treePane.mobshow{display:block;position:absolute;inset:50px 0 60px 0;z-index:40;overflow:auto}
+  #listPane{border-right:0}
+  #detailPane{position:absolute;inset:50px 0 60px 0;z-index:30;background:var(--paper);transform:translateX(100%);transition:transform .18s ease-out;overflow-y:auto;padding:16px 14px 60px}
+  #detailPane.mobopen{transform:translateX(0)}
+  #mobBack{display:inline-flex !important}
+  .fees{grid-template-columns:repeat(2,1fr);gap:8px}
+  .fee{height:auto;padding:8px 10px}
+  .estWrap{grid-template-columns:1fr}
+  .sumPane{order:2}
+  .cvGrid{grid-template-columns:1fr}
+  .cmpWrap{grid-template-columns:1fr}
+  .estTop{gap:6px}
+  .estTop .btn,html.m900 .estTop select.sel{height:34px}
+  .modal{width:94vw}
+  .modal.wide{width:94vw}
+  th,html.m900 td{padding:0 8px}
+  .estTable table{min-width:860px}
+  #topbar{flex-wrap:nowrap}
+  .searchbox{flex:1 1 auto;min-width:0;width:auto}
+  #topbar select.sel{width:92px;flex:0 0 92px}
+  #topbar h1{max-width:110px;overflow:hidden;text-overflow:ellipsis}
+  .searchbox input{min-width:0}
+  #topbar{gap:8px;padding:0 10px}
+  #rail{gap:2px;padding:6px 2px}
+  #rail button.nav{width:44px;height:48px;font-size:9.5px;letter-spacing:0}
+  #rail button.nav svg{width:18px;height:18px}
+  #detailPane{padding-top:46px}
+  #mobBack{top:54px;left:8px;height:24px;padding:0 8px;font-size:11px}
+  #mobTree{top:54px;right:8px;height:24px;padding:0 8px;font-size:11px}
+  .tabs{flex-wrap:wrap;gap:0}
+  .dhead .code{font-size:14px;padding:4px 8px}
+}
+@container (max-width: 600px){
+  #estName{flex:0 0 132px;width:132px;font-size:12px}
+  html,html.m600 body{overflow-x:hidden;max-width:100vw}
+  #app{max-width:100vw}
+  #topbar{height:var(--tb);flex:0 0 var(--tb);padding:0 8px;gap:6px}
+  #topbar h1{display:none}
+  #topbar .crumb{display:none}
+  #topbar .searchbox kbd{display:none}
+  #topbar select.sel{width:76px;flex:0 0 76px;font-size:11px;height:32px}
+  #themeBtn{height:32px;padding:0 8px;font-size:11px}
+  #topbar .pill.acc{position:absolute;left:8px;top:calc(var(--tb) + 4px);z-index:46;font-size:10px;padding:2px 6px;opacity:.9}
+  .searchbox input{height:34px;font-size:16px;padding:0 28px}
+  .estTop{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;gap:8px;padding-bottom:6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .estTop::-webkit-scrollbar{display:none}
+  .estTop .btn,html.m600 .estTop select.sel{flex:0 0 auto;height:36px;font-size:12px}
+  .estTop input{flex:0 0 130px;height:36px;font-size:12px}
+  .btn{min-height:40px}
+  .btn.sm{min-height:32px}
+  #rail{justify-content:space-between;padding-left:4px;padding-right:4px}
+  #rail button.nav{height:52px;width:42px}
+  .row{min-height:60px}
+  .ch .secs button{padding:8px 10px}
+  .estTable td input,html.m600 .fld input,html.m600 select.sel,html.m600 textarea.note{font-size:16px}
+  .estTable td input{height:36px}
+  #app{grid-template-rows:1fr}
+  #rail{position:absolute;left:0;right:0;bottom:0;z-index:45;padding-bottom:calc(6px + env(safe-area-inset-bottom))}
+  #main{padding-bottom:64px}
+  #detailPane{inset:var(--tb) 0 64px 0}
+  #mobBack{top:calc(var(--tb) + 2px)}
+  #mobTree{top:calc(var(--tb) + 2px)}
+  .fees{grid-template-columns:repeat(2,1fr)}
+  .fee .v{font-size:15px}
+  .modal{width:96vw;max-height:86vh}
+  #rail{height:44px}
+  #rail button.nav{height:40px;font-size:9px}
+  #main{padding-bottom:48px}
+  #detailPane{bottom:48px}
+  #topbar .pill.acc{position:static;max-width:84px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:10px;opacity:.9}
+}
+/* 老浏览器回退（无容器查询）：沿用类驱动 */
+@supports not (container-type: inline-size){
   html.m900 #app{grid-template-columns:1fr;grid-template-rows:1fr 60px}
   html.m900 #rail{order:2;flex-direction:row;justify-content:space-around;padding:6px 4px;gap:2px;background:linear-gradient(0deg,#171310,#151210)}
   html.m900 #rail:after{display:none}
@@ -223,7 +363,6 @@ input[type=range]{accent-color:var(--seal);height:4px}
   html.m900 .modal.wide{width:94vw}
   html.m900 th,html.m900 td{padding:0 8px}
   html.m900 .estTable table{min-width:860px}
-#mobBack{display:none;position:fixed;left:10px;top:58px;z-index:35}
   html.m900 #topbar{flex-wrap:nowrap}
   html.m900 .searchbox{flex:1 1 auto;min-width:0;width:auto}
   html.m900 #topbar select.sel{width:92px;flex:0 0 92px}
@@ -238,42 +377,9 @@ input[type=range]{accent-color:var(--seal);height:4px}
   html.m900 #mobTree{top:54px;right:8px;height:24px;padding:0 8px;font-size:11px}
   html.m900 .tabs{flex-wrap:wrap;gap:0}
   html.m900 .dhead .code{font-size:14px;padding:4px 8px}
-/* ═══ v3.2 夜审模式（加班对审：低眩光暖墨底，朱砂提亮保对比） ═══ */
-:root[data-theme="night"]{
-  --paper:#161310; --panel:#1E1A15; --panel2:#211D17;
-  --line:#37312A; --line-soft:#2A251F;
-  --ink:#EDE6D8; --sub:#A89E8B; --faint:#7A7160;
-  --seal:#E0685C; --seal-ink:#F0897C; --seal-soft:#3A221E;
-  --ok:#4FB3A5; --warn:#D99A4E; --danger:#E0685C;
-  --rail:#0E0C0A; --rail-ink:#8F8676; --rail-on:#F0E9DB;
-  --sh1:0 1px 2px rgba(0,0,0,.4); --sh2:0 6px 18px rgba(0,0,0,.5);
-}
-:root[data-theme="night"] #main{background-image:linear-gradient(rgba(237,230,216,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(237,230,216,.03) 1px,transparent 1px)}
-:root[data-theme="night"] th{background:#26211B;color:#B4AA96;box-shadow:0 1px 0 var(--line)}
-:root[data-theme="night"] tbody tr:hover{background:#241F19}
-:root[data-theme="night"] .row.on{background:var(--seal-soft)}
-:root[data-theme="night"] .fee.main{background:linear-gradient(160deg,#2A1B17 0%,var(--panel) 70%)}
-:root[data-theme="night"] .btn{background:#EDE6D8;color:#161310}
-:root[data-theme="night"] .btn:hover{background:#fff}
-:root[data-theme="night"] .btn.ghost{background:transparent;color:var(--seal-ink);border-color:var(--seal)}
-:root[data-theme="night"] .btn.ghost:hover{background:var(--seal-soft)}
-:root[data-theme="night"] .btn.plain{background:var(--panel);color:var(--ink);border-color:var(--line)}
-:root[data-theme="night"] .searchbox input,:root[data-theme="night"] select.sel,:root[data-theme="night"] .fld input,:root[data-theme="night"] textarea.note{background:var(--panel2);color:var(--ink)}
-:root[data-theme="night"] mark{background:#4A2A24;color:#F5B4AA}
-:root[data-theme="night"] .searchbox kbd{background:var(--line-soft);color:var(--sub)}
-:root[data-theme="night"] #toast{background:#EDE6D8;color:#161310}
-:root[data-theme="night"] .hint .chip{background:var(--panel);border-color:var(--line)}
-:root[data-theme="night"] .delta{background:#3A2E1C;color:var(--warn)}
-:root[data-theme="night"] .cat-人工{background:#6FA3D8}:root[data-theme="night"] .cat-材料{background:var(--ok)}:root[data-theme="night"] .cat-机械{background:var(--warn)}
-:root[data-theme="night"] .estTable td select,:root[data-theme="night"] .estTable td input{background:var(--panel2);color:var(--ink);border-color:transparent}
-:root[data-theme="night"] .estTable td input:focus{border-color:var(--seal)}
-
-/* ═══ v3.3 安卓/compact 重修（M3 adaptive：compact<600dp 单pane、44dp 触控、禁字体膨大） ═══ */
-html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   html.m600 #estName{flex:0 0 132px;width:132px;font-size:12px}
   html.m600 html,html.m600 body{overflow-x:hidden;max-width:100vw}
   html.m600 #app{max-width:100vw}
-  
   html.m600 #topbar{height:var(--tb);flex:0 0 var(--tb);padding:0 8px;gap:6px}
   html.m600 #topbar h1{display:none}
   html.m600 #topbar .crumb{display:none}
@@ -282,22 +388,18 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   html.m600 #themeBtn{height:32px;padding:0 8px;font-size:11px}
   html.m600 #topbar .pill.acc{position:fixed;left:8px;top:calc(var(--tb) + 4px);z-index:46;font-size:10px;padding:2px 6px;opacity:.9}
   html.m600 .searchbox input{height:34px;font-size:16px;padding:0 28px}
-  /* 工具条：单行横滑，不堆叠吃屏 */
   html.m600 .estTop{flex-wrap:nowrap;overflow-x:auto;overflow-y:hidden;gap:8px;padding-bottom:6px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
   html.m600 .estTop::-webkit-scrollbar{display:none}
   html.m600 .estTop .btn,html.m600 .estTop select.sel{flex:0 0 auto;height:36px;font-size:12px}
   html.m600 .estTop input{flex:0 0 130px;height:36px;font-size:12px}
-  /* 触控目标 ≥44 */
   html.m600 .btn{min-height:40px}
   html.m600 .btn.sm{min-height:32px}
   html.m600 #rail{justify-content:space-between;padding-left:4px;padding-right:4px}
   html.m600 #rail button.nav{height:52px;width:42px}
   html.m600 .row{min-height:60px}
   html.m600 .ch .secs button{padding:8px 10px}
-  /* 输入 16px 防聚焦缩放 */
   html.m600 .estTable td input,html.m600 .fld input,html.m600 select.sel,html.m600 textarea.note{font-size:16px}
   html.m600 .estTable td input{height:36px}
-  /* 底轨固定+安全区 */
   html.m600 #app{grid-template-rows:1fr}
   html.m600 #rail{position:fixed;left:0;right:0;bottom:0;z-index:45;padding-bottom:calc(6px + env(safe-area-inset-bottom))}
   html.m600 #main{padding-bottom:64px}
@@ -307,12 +409,14 @@ html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
   html.m600 .fees{grid-template-columns:repeat(2,1fr)}
   html.m600 .fee .v{font-size:15px}
   html.m600 .modal{width:96vw;max-height:86vh}
-  /* 窄横屏 */
-  @media (max-height: 480px){
   html.m600 #rail{height:44px}
   html.m600 #rail button.nav{height:40px;font-size:9px}
   html.m600 #main{padding-bottom:48px}
   html.m600 #detailPane{bottom:48px}
-  }
-html.m600,html.m600 body{overflow-x:hidden;max-width:100vw}
-html.m600{--tb:46px}
+  html.m600,html.m600 body{overflow-x:hidden;max-width:100vw}
+  html.m600{--tb:46px}
+}
+
+#mobTree{position:absolute}
+.viewToggle{white-space:nowrap;gap:4px}
+.viewToggle svg{flex:0 0 auto}
