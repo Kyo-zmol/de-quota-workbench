@@ -9,20 +9,21 @@ const NOTES = 'F:\\我\\定额知识库工作台\\notes';
 const PUB = path.join(__dirname, 'public');
 const PORT = process.env.PORT || 8730;
 
-let BOOKS = [], RULES = [], FEES = null, PRICES = null, HABITS = null, PRESETS = null;
+let BOOKS = [], RULES = [], FEES = null, PRICES = null, HABITS = null, PRESETS = null, FIXES = {};
 function loadBooks() {
   BOOKS = [];
   for (const f of fs.readdirSync(PROC).filter(f => f.startsWith('hb2024_') && f.endsWith('.json'))) {
     try {
       const j = JSON.parse(fs.readFileSync(path.join(PROC, f), 'utf8'));
       const bookName = (j.book || f).replace(/\.pdf$/i, '').replace(/hb2024_/, '');
-      for (const it of j.items) { const fe = it.fees || {}; const parts = [+fe.labor || 0, +fe.material || 0, +fe.machine || 0, +fe.fee || 0, +fe.vat || 0]; const hasParts = parts.some(v => v > 0); if (fe.total == null && hasParts) fe.total = +parts.reduce((a2, b2) => a2 + b2, 0).toFixed(2); if (!hasParts && fe.total != null) it.incomplete = true; BOOKS.push({ ...it, book: bookName, file: f }); }
+      for (const it of j.items) { const fx = FIXES[it.code]; if (fx && fx.fees) { it.fees = Object.assign({}, it.fees, fx.fees); it.fixed = fx.kind; it.fixNote = fx.note; } const fe = it.fees || {}; const parts = [+fe.labor || 0, +fe.material || 0, +fe.machine || 0, +fe.fee || 0, +fe.vat || 0]; const hasParts = parts.some(v => v > 0); if (fe.total == null && hasParts) fe.total = +parts.reduce((a2, b2) => a2 + b2, 0).toFixed(2); if (!hasParts && fe.total != null) it.incomplete = true; const sum = parts.reduce((a2, b2) => a2 + b2, 0); const pre = sum - (+fe.vat || 0); const rr = pre > 0 ? (+fe.vat || 0) / pre : 0; it.qaFail = (Math.abs(sum - (+fe.total || 0)) > 0.06) || (pre > 0 && ![0.09, 0.03, 0.06, 0.13, 0].some(x => Math.abs(rr - x) < 0.004)); BOOKS.push({ ...it, book: bookName, file: f }); }
     } catch (e) { console.error('load fail', f, e.message); }
   }
   try { RULES = JSON.parse(fs.readFileSync(path.join(PROC, 'rules_all.json'), 'utf8')).rules || []; } catch { RULES = []; }
   try { FEES = JSON.parse(fs.readFileSync(path.join(PROC, 'fees_hubei2024.json'), 'utf8')); } catch { FEES = null; }
   try { PRICES = JSON.parse(fs.readFileSync(path.join(PROC, 'prices_manual.json'), 'utf8')); } catch { PRICES = { period: '2026-08', items: [] }; }
   try { HABITS = JSON.parse(fs.readFileSync(path.join(PROC, 'rules_habits.json'), 'utf8')); } catch { HABITS = { rules: [] }; }
+  try { FIXES = (JSON.parse(fs.readFileSync(path.join(PROC, 'manual_fixes.json'), 'utf8')).fixes) || {}; } catch { FIXES = {}; }
   try { PRESETS = JSON.parse(fs.readFileSync(path.join(PROC, 'convert_presets.json'), 'utf8')); } catch { PRESETS = []; }
   console.log('loaded items:', BOOKS.length, 'rules:', RULES.length, 'prices:', PRICES ? PRICES.items.length : 0, 'habits:', HABITS ? HABITS.rules.length : 0);
 }
@@ -64,7 +65,7 @@ function search(q, book, limit = 80) {
     if (score > 0) out.push({ it, score });
   }
   out.sort((a, b) => b.score - a.score || a.it.code.localeCompare(b.it.code));
-  return out.slice(0, limit).map(o => ({ code: o.it.code, name: o.it.name, spec: o.it.spec, unit: o.it.unit, total: o.it.fees ? o.it.fees.total : null, noTax: o.it.fees ? +((o.it.fees.total || 0) - (o.it.fees.vat || 0)).toFixed(2) : null, chapter: o.it.chapter, section: o.it.section, book: o.it.book, score: o.score }));
+  return out.slice(0, limit).map(o => ({ code: o.it.code, name: o.it.name, spec: o.it.spec, unit: o.it.unit, total: o.it.fees ? o.it.fees.total : null, noTax: o.it.fees ? +((o.it.fees.total || 0) - (o.it.fees.vat || 0)).toFixed(2) : null, chapter: o.it.chapter, section: o.it.section, book: o.it.book, score: o.score, qaFail: !!o.it.qaFail, fixed: o.it.fixed || null }));
 }
 function searchRules(q, limit = 60) {
   q = (q || '').trim();
